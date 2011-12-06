@@ -1,30 +1,70 @@
 package Markdown::Pod;
-# ABSTRACT: ...
+# ABSTRACT: Convert Markdown to POD
 
+use strict;
+use warnings;
+
+use Markdent::Parser;
+use Markdent::Types qw( Str );
 use Moose;
-use MooseX::SemiAffordanceAccessor;
+use MooseX::Params::Validate qw( validated_list );
 use MooseX::StrictConstructor;
 use namespace::autoclean;
-use autodie;
 
-has 'foo' => (
-    is       => 'ro',
-    isa      => 'Str',
-    required => 1,
-);
+use Markdent::Handler::Pod;
 
-sub bar {
+sub markdown_to_pod {
+    my $self = shift;
+    my ( $dialect, $title, $markdown, $encoding ) = validated_list(
+        \@_,
+        dialect  => { isa => Str, default => 'Standard' },
+        title    => { isa => Str },
+        markdown => { isa => Str },
+        encoding => { isa => Str, default => q{}, optional => 1 },
+    );
+
+    my $capture = q{};
+    open my $fh, '>', \$capture
+        or die $!;
+
+    if (PerlIO::Layer::->find($encoding, 1)) {
+        binmode $fh, ":$encoding";
+    }
+    else {
+        warn "cannot find such '$encoding' encoding\n";
+    }
+
+    my $handler = Markdent::Handler::Pod->new(
+        title    => $title,
+        encoding => $encoding,
+        output   => $fh,
+    );
+
+    my $parser = Markdent::Parser->new(
+        dialect => $dialect,
+        handler => $handler,
+    );
+
+    $parser->parse( markdown => $markdown );
+
+    $capture =~ s/\n+$/\n/;
+
+    return $capture;
 }
 
 __PACKAGE__->meta->make_immutable;
-no Moose;
 1;
 __END__
 
 
 =head1 SYNOPSIS
 
-...
+    use Markdown::Pod;
+    
+    my $m2p = Markdown::Pod->new;
+    my $pod = $m2p->markdown_to_pod(
+        markdown => $markdown,
+    );
 
 
 =head1 DESCRIPTION
