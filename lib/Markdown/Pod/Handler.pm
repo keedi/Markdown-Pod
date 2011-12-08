@@ -1,13 +1,13 @@
 package Markdown::Pod::Handler;
-# ABSTRACT: 
+# ABSTRACT:
 
 use strict;
 use warnings;
- 
+
 use Markdent::Types qw(
     Bool Str HashRef OutputStream HeaderLevel
 );
- 
+
 use namespace::autoclean;
 use Moose;
 use MooseX::SemiAffordanceAccessor;
@@ -20,7 +20,7 @@ has encoding => (
     isa      => Str,
     default  => q{},
 );
- 
+
 has title => (
     is       => 'ro',
     isa      => Str,
@@ -34,8 +34,9 @@ has _output => (
     init_arg => 'output',
 );
 
-my @list_type;
 my $link_buf;
+my @blockquotes;
+my @list_type;
 
 sub _stream {
     my ( $self, @params ) = @_;
@@ -54,8 +55,7 @@ sub end_document   { }
 sub text {
     my $self = shift;
     my ($text) = validated_list( \@_, text => { isa => Str } );
- 
-    chomp $text;
+
     if ( $link_buf ) {
         $link_buf->{text} = $text;
     }
@@ -81,17 +81,17 @@ sub end_header {
         level => { isa => HeaderLevel },
     );
 
-    $self->_stream( "\n\n" );
+    $self->_stream( "\n" );
 }
 
 sub start_paragraph {
     my $self  = shift;
 }
- 
+
 sub end_paragraph {
     my $self  = shift;
- 
-    $self->_stream("\n\n");
+
+    $self->_stream("\n");
 }
 
 sub start_link {
@@ -103,13 +103,13 @@ sub start_link {
         id             => { isa => Str, optional => 1 },
         is_implicit_id => { isa => Bool, optional => 1 },
     );
- 
+
     delete @p{ grep { ! defined $p{$_} } keys %p };
 
     $link_buf->{uri} = $p{uri};
     $self->_stream('L<');
 }
- 
+
 sub end_link {
     my $self = shift;
 
@@ -125,13 +125,13 @@ sub end_link {
 
 sub start_emphasis {
     my $self = shift;
- 
+
     $self->_stream('B<');
 }
- 
+
 sub end_emphasis {
     my $self = shift;
- 
+
     $self->_stream('>');
 }
 
@@ -144,30 +144,42 @@ sub preformatted {
     $self->_stream( $text, "\n\n" );
 }
 
+sub start_blockquote {
+    my $self  = shift;
+
+    $self->_stream("=begin blockquote\n\n");
+}
+
+sub end_blockquote {
+    my $self  = shift;
+
+    $self->_stream("=end blockquote\n\n");
+}
+
 sub start_unordered_list {
     my $self  = shift;
- 
+
     push @list_type, '*';
     $self->_stream("=over\n\n");
 }
- 
+
 sub end_unordered_list {
     my $self  = shift;
- 
+
     my $type = pop @list_type;
     $self->_stream("=back\n\n");
 }
- 
+
 sub start_ordered_list {
     my $self  = shift;
- 
+
     push @list_type, '1.';
     $self->_stream("=over\n\n");
 }
- 
+
 sub end_ordered_list {
     my $self  = shift;
- 
+
     my $type = pop @list_type;
     $self->_stream("=back\n\n");
 }
@@ -177,22 +189,22 @@ sub start_list_item {
 
     $self->_stream("=item $list_type[-1]\n\n");
 }
- 
+
 sub end_list_item {
     my $self  = shift;
- 
+
     $self->_stream("\n\n");
 }
 
 sub start_code {
     my $self = shift;
- 
+
     $self->_stream('C<');
 }
- 
+
 sub end_code {
     my $self = shift;
- 
+
     $self->_stream('>');
 }
 
@@ -206,7 +218,7 @@ sub image {
         id             => { isa => Str, optional => 1 },
         is_implicit_id => { isa => Bool, optional => 1 },
     );
- 
+
     delete @p{ grep { ! defined $p{$_} } keys %p };
 
     my $alt_text = exists $p{alt_text} ? qq|alt="$p{alt_text}"| : q{};
@@ -221,6 +233,24 @@ sub image {
     }
 
     $self->_stream( qq|=for html <img src="$p{uri}" $alt_text$attr_text />| );
+}
+
+sub start_html_tag {
+    my $self = shift;
+    my ( $tag, $attributes ) = validated_list(
+        \@_,
+        tag        => { isa => Str },
+        attributes => { isa => HashRef },
+    );
+}
+
+sub end_html_tag {
+    my $self = shift;
+    my ( $tag, $attributes ) = validated_list(
+        \@_,
+        tag        => { isa => Str },
+        attributes => { isa => HashRef },
+    );
 }
 
 sub html_tag {
@@ -239,9 +269,6 @@ sub html_tag {
     else {
         $self->_stream( qq|<$tag $attributes_str />| );
     }
-
-    use Data::Dumper;
-    print Dumper( [ $tag, $attributes ] );
 }
 
 __PACKAGE__->meta->make_immutable;

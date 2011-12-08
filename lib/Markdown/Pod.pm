@@ -49,6 +49,22 @@ sub markdown_to_pod {
 
     $capture =~ s/\n+$/\n/;
 
+    #
+    # FIXME
+    # dirty code to support blockquote
+    #
+    $capture =~ s{
+        ^ =begin \s+ blockquote
+        \s+
+        (.*?)
+        \s+
+        ^ =end \s+ blockquote
+    }{
+        my $quoted = $1;
+        $quoted =~ s/^/    /gsm;
+        $quoted;
+    }xgsme;
+
     return $capture;
 }
 
