@@ -1,4 +1,4 @@
-package Markdent::Handler::Pod;
+package Markdown::Pod::Handler;
 # ABSTRACT: 
 
 use strict;

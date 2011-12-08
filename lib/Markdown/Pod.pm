@@ -11,7 +11,7 @@ use MooseX::Params::Validate qw( validated_list );
 use MooseX::StrictConstructor;
 use namespace::autoclean;
 
-use Markdent::Handler::Pod;
+use Markdown::Pod::Handler;
 
 sub markdown_to_pod {
     my $self = shift;
@@ -34,7 +34,7 @@ sub markdown_to_pod {
         warn "cannot find such '$encoding' encoding\n";
     }
 
-    my $handler = Markdent::Handler::Pod->new(
+    my $handler = Markdown::Pod::Handler->new(
         title    => $title,
         encoding => $encoding,
         output   => $fh,
