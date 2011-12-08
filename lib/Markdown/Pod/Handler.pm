@@ -5,7 +5,7 @@ use strict;
 use warnings;
  
 use Markdent::Types qw(
-    Bool Str OutputStream HeaderLevel
+    Bool Str HashRef OutputStream HeaderLevel
 );
  
 use namespace::autoclean;
@@ -221,6 +221,27 @@ sub image {
     }
 
     $self->_stream( qq|=for html <img src="$p{uri}" $alt_text$attr_text />| );
+}
+
+sub html_tag {
+    my $self = shift;
+    my ( $tag, $attributes ) = validated_list(
+        \@_,
+        tag        => { isa => Str },
+        attributes => { isa => HashRef },
+    );
+
+    my $attributes_str = q{};
+    $attributes_str = join q{ }, map { qq|$_="$attributes->{$_}"| } sort keys %$attributes;
+    if ( $tag =~ /^br$/i ) {
+        $self->_stream( qq|<$tag $attributes_str />\n| );
+    }
+    else {
+        $self->_stream( qq|<$tag $attributes_str />| );
+    }
+
+    use Data::Dumper;
+    print Dumper( [ $tag, $attributes ] );
 }
 
 __PACKAGE__->meta->make_immutable;
