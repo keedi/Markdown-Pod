@@ -1,5 +1,5 @@
 package Markdown::Pod::Handler;
-# ABSTRACT:
+# ABSTRACT: Parser module to convert from markdown to POD
 
 use strict;
 use warnings;
@@ -19,12 +19,6 @@ has encoding => (
     is       => 'ro',
     isa      => Str,
     default  => q{},
-);
-
-has title => (
-    is       => 'ro',
-    isa      => Str,
-    required => 1,
 );
 
 has _output => (
@@ -47,7 +41,6 @@ sub start_document {
     my $self = shift;
 
     $self->_stream( '=encoding ' . $self->encoding . "\n\n" ) if $self->encoding;
-    $self->_stream( '=head1 ' . $self->title . "\n\n" ) if $self->title;
 }
 
 sub end_document   { }
@@ -275,3 +268,70 @@ __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
 __END__
+
+=head1 SYNOPSIS
+
+    my $handler = Markdown::Pod::Handler->new(
+        encoding => $encoding,
+        output   => $fh,
+    );
+    
+    my $parser = Markdent::Parser->new(
+        dialect => $dialect,
+        handler => $handler,
+    );
+
+
+
+=head1 DESCRIPTION
+
+This method creates a new handler.
+It a
+
+    use Markdown::Pod;
+    
+    my $m2p = Markdown::Pod->new;
+    my $pod = $m2p->markdown_to_pod(
+        markdown => $markdown,
+    );
+
+...
+
+
+=attr markdown
+
+markdown text
+
+=attr encoding
+
+encoding to use
+
+=method new
+
+create Markdown::Pod object
+
+=method markdown_to_pod
+
+convert markdown text to POD text
+
+
+=head1 SEE ALSO
+
+=over
+
+=item *
+
+L<Markdent>
+
+=item *
+
+L<Pod::Markdown>
+
+=item *
+
+L<Text::MultiMarkdown>, L<Text::Markdown>
+
+=back
+
+
+=cut
