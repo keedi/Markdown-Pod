@@ -89,17 +89,11 @@ __END__
 
 =head1 DESCRIPTION
 
-    use Markdown::Pod;
-    
-    my $m2p = Markdown::Pod->new;
-    my $pod = $m2p->markdown_to_pod(
-        markdown => $markdown,
-    );
-
-        markdown => { isa => Str },
-        encoding => { isa => Str, default => q{}, optional => 1 },
-
-...
+This module parses Markdown text and return POD text.
+It uses L<Markdent> module to parse Markdown.
+Due to POD doesn't support blockquoted HTML tag,
+so quoted text of Markdown will not be handled properly.
+Quoted text will be converted to POD verbatim section.
 
 
 =attr markdown
@@ -108,7 +102,7 @@ markdown text
 
 =attr encoding
 
-encoding to use
+encoding to use. Available type of encoding is same as L<Encode> module.
 
 =method new
 

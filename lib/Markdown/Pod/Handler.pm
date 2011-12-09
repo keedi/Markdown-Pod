@@ -285,17 +285,8 @@ __END__
 
 =head1 DESCRIPTION
 
-This method creates a new handler.
-It a
-
-    use Markdown::Pod;
-    
-    my $m2p = Markdown::Pod->new;
-    my $pod = $m2p->markdown_to_pod(
-        markdown => $markdown,
-    );
-
-...
+This module is a handler of L<Markdent> Markdown parser.
+It converts Markdown to POD.
 
 
 =attr markdown
@@ -306,9 +297,10 @@ markdown text
 
 encoding to use
 
+
 =method new
 
-create Markdown::Pod object
+create Markdown::Pod::Handler object
 
 =method markdown_to_pod
 

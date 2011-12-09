@@ -123,3 +123,16 @@ sub show_version {
 1;
 __END__
 
+=head1 SYNOPSIS
+
+    my $app = Markdown::Pod::script->new;
+    $app->parse_options(@ARGV);
+    $app->doit or exit(1);
+
+
+=head1 DESCRIPTION
+
+This module contains script related functions.
+
+
+=cut
