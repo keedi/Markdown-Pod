@@ -1,0 +1,17 @@
+#!/usr/bin/env perl
+
+# PODNAME: markdown2pod
+# ABSTRACT: markdown2pod - convert Markdown text to Pod
+
+use Markdown::Pod::script;
+
+unless (caller) {
+    my $app = Markdown::Pod::script->new;
+    $app->parse_options(@ARGV);
+    $app->doit or exit(1);
+}
+
+__END__
+
+=head1 SYNOPSIS
+
