@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#!perl
 
 # PODNAME: markdown2pod
 # ABSTRACT: markdown2pod - convert Markdown text to Pod
