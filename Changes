@@ -1,6 +1,8 @@
 Release history for Markdown-Pod
 
 {{ $NEXT }}
+    - add real world markdown converting test
+      - take markdown from http://advent.perl.kr/2011
     - do not check attr param for end_html_tag
     - [RT #75458] apply abigail's patch
       - emphasis tag will be match with POD's 'I<>'
