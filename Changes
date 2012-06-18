@@ -1,7 +1,9 @@
 Release history for Markdown-Pod
 
 {{ $NEXT }}
+    - [RT #75458] apply abigail's patch
+      - emphasis tag will be match with POD's 'I<>'
+      - strong tag will be match with POD's 'B<>'
 
 0.001     2011-12-10 04:15:49 Asia/Seoul
     First version, released on unsuspecting world.
-
