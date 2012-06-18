@@ -254,7 +254,6 @@ sub end_html_tag {
     my ( $tag, $attributes ) = validated_list(
         \@_,
         tag        => { isa => Str },
-        attributes => { isa => HashRef },
     );
 }
 
