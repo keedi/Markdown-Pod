@@ -1,7 +1,12 @@
 Release history for Markdown-Pod
 
-{{ $NEXT }}
+0.002     2012-06-18 18:06:55 Asia/Seoul
+    - add real world markdown converting test
+      - take markdown from http://advent.perl.kr/2011
+    - do not check attr param for end_html_tag
+    - [RT #75458] apply abigail's patch
+      - emphasis tag will be match with POD's 'I<>'
+      - strong tag will be match with POD's 'B<>'
 
 0.001     2011-12-10 04:15:49 Asia/Seoul
     First version, released on unsuspecting world.
-

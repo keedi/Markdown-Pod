@@ -116,10 +116,22 @@ sub end_link {
     $link_buf = undef;
 }
 
-sub start_emphasis {
+sub start_strong {
     my $self = shift;
 
     $self->_stream('B<');
+}
+
+sub end_strong {
+    my $self = shift;
+
+    $self->_stream('>');
+}
+
+sub start_emphasis {
+    my $self = shift;
+
+    $self->_stream('I<');
 }
 
 sub end_emphasis {
@@ -242,7 +254,6 @@ sub end_html_tag {
     my ( $tag, $attributes ) = validated_list(
         \@_,
         tag        => { isa => Str },
-        attributes => { isa => HashRef },
     );
 }
 
@@ -305,6 +316,11 @@ create Markdown::Pod::Handler object
 =method markdown_to_pod
 
 convert markdown text to POD text
+
+
+=head1 CONTRIBUTORS
+
+Abigail (ABIGAIL)
 
 
 =head1 SEE ALSO
