@@ -116,6 +116,18 @@ sub end_link {
     $link_buf = undef;
 }
 
+sub start_strong {
+    my $self = shift;
+
+    $self->_stream('B<');
+}
+
+sub end_strong {
+    my $self = shift;
+
+    $self->_stream('>');
+}
+
 sub start_emphasis {
     my $self = shift;
 
