@@ -1,6 +1,7 @@
 Release history for Markdown-Pod
 
 {{ $NEXT }}
+    - do not check attr param for end_html_tag
     - [RT #75458] apply abigail's patch
       - emphasis tag will be match with POD's 'I<>'
       - strong tag will be match with POD's 'B<>'
