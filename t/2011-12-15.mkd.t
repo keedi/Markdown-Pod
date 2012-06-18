@@ -16,6 +16,9 @@ my $dst = $m2p->markdown_to_pod(
     markdown => decode_utf8(read_file($file)),
 );
 
+$src =~ s/\s+\Z//gsm;
+$dst =~ s/\s+\Z//gsm;
+
 is $dst, $src, "converting $file";
 
 __DATA__
