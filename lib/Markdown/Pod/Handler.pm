@@ -119,7 +119,7 @@ sub end_link {
 sub start_emphasis {
     my $self = shift;
 
-    $self->_stream('B<');
+    $self->_stream('I<');
 }
 
 sub end_emphasis {
