@@ -318,11 +318,6 @@ create Markdown::Pod::Handler object
 convert markdown text to POD text
 
 
-=head1 CONTRIBUTORS
-
-Abigail (ABIGAIL)
-
-
 =head1 SEE ALSO
 
 =over
