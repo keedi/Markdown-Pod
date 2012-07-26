@@ -1,6 +1,8 @@
 Release history for Markdown-Pod
 
 0.XXX
+    - [RT #77887] parse embed html
+      - display html using POD's =begin and =end tag pair
     - [RT #77889] display list's bullet
       - Markdent 0.21 supports bullet attribute for list
 
