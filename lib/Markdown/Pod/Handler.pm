@@ -293,6 +293,11 @@ END_HTML
     );
 }
 
+sub line_break {
+    my $self = shift;
+    $self->_stream( "\n\n" );
+}
+
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
