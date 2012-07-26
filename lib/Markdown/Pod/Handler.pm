@@ -275,6 +275,25 @@ sub html_tag {
     }
 }
 
+sub html_block {
+    my $self = shift;
+    my ($html) = validated_list( \@_, html => { isa => Str }, );
+
+    chomp $html;
+    $self->_output()->print(
+            <<"END_HTML"
+
+=begin html
+
+$html
+
+=end html
+
+END_HTML
+    );
+}
+
+
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
