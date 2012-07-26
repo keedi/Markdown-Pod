@@ -66,32 +66,32 @@ C<system>이라던가 역따옴표, C<while> 구문, 환경 변수 등 가리지
 
 =over
 
-=item *
+=item -
 
 GitHub 계정
 
 
-=item *
+=item -
 
 블로그용으로 사용할 GitHub의 저장소
 
 
-=item *
+=item -
 
 L<이미 만들어 놓은 예제 블로그|https://github.com/pung96/blog>
 
 
-=item *
+=item -
 
 L<CPAN의 YAML 모듈|https://metacpan.org/module/YAML>
 
 
-=item *
+=item -
 
 L<CPAN의 Text::Xslate 모듈|https://metacpan.org/module/Text::Xslate>
 
 
-=item *
+=item -
 
 L<CPAN의 Text::Markdown 모듈|https://metacpan.org/module/Text::Markdown>
 

@@ -304,7 +304,7 @@ Nunchuck 연결
 * [Win32::SerialPort][cpan-win32-serialport]로 아두이노가 보내는 데이터를 수신합니다.
 * [Win32::GuiTest][cpan-win32-guitest]로 마우스를 제어합니다.
 * 어른은 혼자 노는 겁니다.
-* 'Flask 짜응 하악'하던 블로그에 불쑥 나타나 Dancer라는 십계를 내린 am0c군에게 감사의 뜻을 전하며 무지한 제게 많은 가르침을 주시는 aero님께도 감사의 말씀을 전해드리고 싶습니다.  
+* 'Flask 짜응 하악'하던 블로그에 불쑥 나타나 Dancer라는 십계를 내린 am0c군에게 감사의 뜻을 전하며 무지한 제게 많은 가르침을 주시는 aero님께도 감사의 말씀을 전해드리고 싶습니다.
 
 
 [twitter-ja3ck]: http://twitter.com/ja3ck
@@ -325,3 +325,4 @@ Nunchuck 연결
 [arduino-playground-wiichuckclass]: http://www.arduino.cc/playground/Main/WiiChuckClass
 
 [youtube-nunchuck]: http://www.youtube.com/watch?v=1_gaxw9GKRg
+

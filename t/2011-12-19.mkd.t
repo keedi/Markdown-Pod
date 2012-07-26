@@ -33,7 +33,7 @@ Author:   luzluna
 
 =head2 저자
 
-L<@luzluna|http://twitter.com/luzluna> - 
+L<@luzluna|http://twitter.com/luzluna> -
 Seoul.pm과 #perl-kr의 육아 전문 컨설턴트, 사회적 기업을 꿈꾸는 커피 매니아이자 백수.
 
 
@@ -192,7 +192,7 @@ C<$chat_re>에 매치된 문자열이 넘어가겠네요.
 
 방금 본 C<post> 함수와 비슷합니다.
 먼저 해당 핸들러는 C<__PACKAGE__->asynchronous(1);>을 통해 비동기 모드로 설정했습니다.
-Tatsumaki::MessageQueue 인스턴스를 하나 만들고 C<$mq->poll_once>로 모든 메시지를 한꺼번에 대기합니다. 
+Tatsumaki::MessageQueue 인스턴스를 하나 만들고 C<$mq->poll_once>로 모든 메시지를 한꺼번에 대기합니다.
 핸들러를 비동기 모드로 설정했기 때문에 핸들러 객체에 등록된 Writer 객체를 사용하는
 C<write>과 C<finish> 함수로 도착한 이벤트를 출력합니다. 해시 레퍼런스였던 메시지는 JSON으로 변환되어 전달됩니다.
 C<ChatMultipartPollHandler>는 어떨까요?
@@ -273,7 +273,7 @@ C<chat.html>에 아래와 같이 캔버스 한 줄을 추가합니다.
         $.ev.handlers.game = onGameEvent;
     });
 
-마지막으로, game 타입의 메시지를 다루기 위해 서버 코드를 조금 수정합니다.    
+마지막으로, game 타입의 메시지를 다루기 위해 서버 코드를 조금 수정합니다.
 
     #!perl
     package ChatPostHandler;
@@ -323,22 +323,22 @@ I<그림 1.> 완성된 채팅 서비스 (L<원본|2011-12-19-1.png>)
 
 =over
 
-=item *
+=item -
 
 L<Tatsumaki SlideShare|http://www.slideshare.net/miyagawa/tatsumaki>
 
 
-=item *
+=item -
 
 L<Github for Tatsumaki|https://github.com/miyagawa/Tatsumaki>
 
 
-=item *
+=item -
 
 L<PSGI/Plack|http://plackperl.org/>
 
 
-=item *
+=item -
 
 L<Twiggy|http://search.cpan.org/perldoc?Twiggy>
 

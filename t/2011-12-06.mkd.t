@@ -448,12 +448,12 @@ L<Web::Scraper|http://metacpan.org/module/Web::Scraper>나 L<Web::Query|http://m
 
 =over
 
-=item *
+=item -
 
 L<Wikipedia for Color Difference|http://en.wikipedia.org/wiki/Color_difference>
 
 
-=item *
+=item -
 
 L<Color Difference Algorithm|http://www.emanueleferonato.com/2009/08/28/color-differences-algorithm/>
 
@@ -563,7 +563,7 @@ C</category/gstar/color/red>와 같이 특정 색상을 필터하도록 요청�
 
 =over
 
-=item *
+=item -
 
 빨간색:
 
@@ -574,7 +574,7 @@ C</category/gstar/color/red>와 같이 특정 색상을 필터하도록 요청�
 
 =over
 
-=item *
+=item -
 
 파란색:
 
@@ -614,27 +614,27 @@ Let's Dance!
 
 =over
 
-=item *
+=item -
 
 L<PSGI/Plack|http://plackperl.org/>
 
 
-=item *
+=item -
 
 L<perldancer.org|http://perldancer.org/>
 
 
-=item *
+=item -
 
 L<Nice Slides|http://perldancer.org/dancefloor>
 
 
-=item *
+=item -
 
 L<Cool Dancers|http://perldancer.org/slides>
 
 
-=item *
+=item -
 
 L<YouPerl at github|https://github.com/am0c/seoulpm-advent-calendar-youperl>
 

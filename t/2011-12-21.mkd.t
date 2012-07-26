@@ -62,24 +62,24 @@ Perl로 MMORPG를 만들어보겠다는 꿈을 갖고 있지만
 
 =over
 
-=item *
+=item -
 
 기본 주식 지식 및 HTS를 이용한 매매 경험,
   L<주식투자 무작정 따라하기|http://www.yes24.com/24/goods/5926363?scode=032&OzSrank=8>
 
 
-=item *
+=item -
 
 주식에 대한 (약간의) 기술적 분석 (Technical Analysis)
   L<개념과 원리가 있는 친절한 기술적 분석|http://www.yes24.com/24/goods/4965201?scode=032&OzSrank=9>
 
 
-=item *
+=item -
 
 L<Etrade 증권|http://etrade.co.kr>의 X-ing API
 
 
-=item *
+=item -
 
 COM 인터페이스를 다루기 위한 L<CPAN의 Win32::OLE 모듈|https://metacpan.org/module/Win32::OLE>
 
@@ -118,22 +118,22 @@ X-ing API가 제공 하는 COM을 이용해 모의 서버에 접속하면
 
 =over
 
-=item *
+=item -
 
 Etrade 증권 서비스를 로긴 후 세션을 유지
 
 
-=item *
+=item -
 
 실시간 호가 및 체결값을 실시간으로 받기
 
 
-=item *
+=item -
 
 현물 매수/매도 주문
 
 
-=item *
+=item -
 
 선물,옵션 그리고 ELW 파생 상품 서비스 이용
 
@@ -261,17 +261,17 @@ X-ing API에서 세션을 담당하는 C<XA_Session.XASession>을 불러 OLE 객
 
 =over
 
-=item *
+=item -
 
 C<1>: 로그인에 성공
 
 
-=item *
+=item -
 
 C<2>: 로그아웃에 성공
 
 
-=item *
+=item -
 
 C<3>: 연결 끊김
 
@@ -299,27 +299,27 @@ C<WithEvents>를 사용하지 않으면 로드한 객체의 이벤트를 핸들�
 
 =over
 
-=item *
+=item -
 
 I<서버에 연결>: X-ing 서버에 연결
 
 
-=item *
+=item -
 
 I<로그인>: 서버에 아이디/암호, 공인인증으로 로그인
 
 
-=item *
+=item -
 
 I<데이터처리>: 조회성 TR/실시간 TR을 이용하여 데이터 조회 및 처리
 
 
-=item *
+=item -
 
 I<로그아웃>: X-ing 서버에서 로그아웃
 
 
-=item *
+=item -
 
 I<서버연결종료>: 서버와 연결된 세션 종료
 
@@ -367,12 +367,12 @@ X-ing API는 두 종류의 I<트랜잭션>(transaction)을 지원 합니다.
 
 =over
 
-=item *
+=item -
 
 I<조회 트랜잭션>: 서버로 부터 요청 당시의 데이터를 전송
 
 
-=item *
+=item -
 
 I<실시간 트랜잭션>: 서버로 데이터 요청을 하면 이후에 데이터가 변경될 때마다 데이터를 전송(이벤트 방식)
 
@@ -517,37 +517,37 @@ C<Tran/t5501.res>에 정의되어 있으니 불러오도록 합니다.
 
 =over
 
-=item *
+=item -
 
 C<accno>: 증권 계좌 번호(지금은 모의투자 계좌 번호)
 
 
-=item *
+=item -
 
 C<passwd>: 증권계좌 암호
 
 
-=item *
+=item -
 
 C<expcode>: 주식 번호(앞에 A를 앞에 붙임)
 
 
-=item *
+=item -
 
 C<qty>: 수량
 
 
-=item *
+=item -
 
 C<price>: 지정가일 경우 원하는 체결 가격
 
 
-=item *
+=item -
 
 C<memegb>: 매매 구분(C<1>은 매수, C<2>는 매도)
 
 
-=item *
+=item -
 
 C<hogagb>: 호가유형 코드(C<00>는 지정가, C<03>은 시장, 등등)
 

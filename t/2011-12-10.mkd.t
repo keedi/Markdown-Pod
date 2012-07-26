@@ -70,12 +70,12 @@ L<Win32::GuiTest - Perl GUI Test Utilities|http://p3rl.org/Win32::GuiTest> 모�
 
 =over
 
-=item *
+=item -
 
 L<CPAN의 Win32::GuiTest 모듈|http://p3rl.org/Win32::GuiTest>
 
 
-=item *
+=item -
 
 L<CPAN의 Win32::GuiTest::Examples 예제|http://p3rl.org/Win32::GuiTest::Examples>
 
@@ -97,132 +97,132 @@ CPAN의 GuiTest는 총 26개의 예제를 제공합니다.
 
 =over
 
-=item *
+=item -
 
 L<ask.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-ask.pl>
 
 
-=item *
+=item -
 
 L<calc.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-calc.pl>
 
 
-=item *
+=item -
 
 L<excel.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-excel.pl>
 
 
-=item *
+=item -
 
 L<excel2.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-excel2.pl>
 
 
-=item *
+=item -
 
 L<fonts.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-fonts.pl>
 
 
-=item *
+=item -
 
 L<iswindowstyle.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-iswindowstyle.pl>
 
 
-=item *
+=item -
 
 L<keypress.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-keypress.pl>
 
 
-=item *
+=item -
 
 L<menuselect.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-menuselect.pl>
 
 
-=item *
+=item -
 
 L<notepad.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-notepad.pl>
 
 
-=item *
+=item -
 
 L<notepad_text.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-notepad_text.pl>
 
 
-=item *
+=item -
 
 L<paint.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-paint.pl>
 
 
-=item *
+=item -
 
 L<paint_abs.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-paint_abs.pl>
 
 
-=item *
+=item -
 
 L<pushbutton.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-pushbutton.pl>
 
 
-=item *
+=item -
 
 L<rawkey.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-rawkey.pl>
 
 
-=item *
+=item -
 
 L<selecttabitem.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-selecttabitem.pl>
 
 
-=item *
+=item -
 
 L<showcpl.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-showcpl.pl>
 
 
-=item *
+=item -
 
 L<showmouse.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-showmouse.pl>
 
 
-=item *
+=item -
 
 L<showwin.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-showwin.pl>
 
 
-=item *
+=item -
 
 L<spy--.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-.pl>
 
 
-=item *
+=item -
 
 L<spy.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-spy.pl>
 
 
-=item *
+=item -
 
 L<start.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-start.pl>
 
 
-=item *
+=item -
 
 L<tab.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-tab.pl>
 
 
-=item *
+=item -
 
 L<waitwindow.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-waitwindow.pl>
 
 
-=item *
+=item -
 
 L<which.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-which.pl>
 
 
-=item *
+=item -
 
 L<winbmp.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-winbmp.pl>
 
 
-=item *
+=item -
 
 L<wptr.pl|http://p3rl.org/Win32::GuiTest::Examples#eg-wptr.pl>
 
@@ -345,22 +345,22 @@ I<그림 2.> 원격 제어가 자동으로 수락된 모습 L<(원본)|2011-12-1
 
 =over
 
-=item *
+=item -
 
 L<Win32::Process::Memory 활용 예제|http://honeyperl.tistory.com/entry/Win32ProcessMemory>
 
 
-=item *
+=item -
 
 L<한글 문자열을 키보드 자판의 영문자로 변환|http://honeyperl.tistory.com/entry/%ED%95%9C%EA%B8%80-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EC%9E%90%ED%8C%90%EC%97%90-%EC%9E%85%EB%A0%A5%EB%90%98%EB%8A%94-%EC%98%81%EB%AC%B8%EB%A1%9C-%EB%B0%94%EA%BE%B8%EB%8A%94-%EB%B0%A9%EB%B2%95>
 
 
-=item *
+=item -
 
 L<네이트온 쪽지 자동 답장 프로그램|http://honeyperl.tistory.com/entry/%EB%84%A4%EC%9D%B4%ED%8A%B8%EC%98%A8-%EC%AA%BD%EC%A7%80-%EC%9E%90%EB%8F%99%EB%8B%B5%EC%9E%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8> (지금은 버전이 바뀌어 작동하지 않습니다.)
 
 
-=item *
+=item -
 
 L<플래시 게임을 즐기자.|http://honeyperl.tistory.com/entry/%ED%94%8C%EB%9E%98%EC%8B%9C-%EA%B2%8C%EC%9E%84%EC%9D%84-%EC%A6%90%EA%B8%B0%EC%9E%90>
 
