@@ -74,7 +74,7 @@ DB와 S/W 개발, 생명공학 기술 정보 수집, 연구소, 학회, 산업�
 
 =over
 
-=item *
+=item -
 
 상황 하나.
 
@@ -87,7 +87,7 @@ DB와 S/W 개발, 생명공학 기술 정보 수집, 연구소, 학회, 산업�
 
 
 
-=item *
+=item -
 
 상황 둘.
 
@@ -174,12 +174,12 @@ E-utillity의 E-search를 다음처럼 사용합니다.
 
 =over
 
-=item *
+=item -
 
 L<http://eutils.ncbi.nlm.nih.gov/entrez/query/static/eutils_example.pl|http://eutils.ncbi.nlm.nih.gov/entrez/query/static/eutils_example.pl>
 
 
-=item *
+=item -
 
 L<http://eutils.ncbi.nlm.nih.gov/entrez/query/static/epost.pl|http://eutils.ncbi.nlm.nih.gov/entrez/query/static/epost.pl>
 

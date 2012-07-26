@@ -112,27 +112,27 @@ L<s3cr3t 전체 소스코드|https://gist.github.com/1408846>도 꼭 확인해�
 
 =over
 
-=item *
+=item -
 
 L<CPAN의 Acme::Bleach 모듈|https://metacpan.org/module/Acme::Bleach>
 
 
-=item *
+=item -
 
 L<s3cr3t gist|https://gist.github.com/1408846>
 
 
-=item *
+=item -
 
 L<gypark님의 위키|http://gypark.pe.kr/wiki/Perl/Pack#H_1_7_2>
 
 
-=item *
+=item -
 
 L<perldoc pack|http://perldoc.perl.org/functions/pack.html>
 
 
-=item *
+=item -
 
 L<perldoc unpack|http://perldoc.perl.org/functions/unpack.html>
 

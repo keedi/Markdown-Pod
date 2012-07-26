@@ -72,7 +72,7 @@ Learning Perl 5판 번역서인 L<거침없이 배우는 Perl|http://books.perl.
 
 =over
 
-=item *
+=item -
 
 L<거침없이 배우는 Perl 서평|https://github.com/aero/perl_docs/blob/master/Learning_Perl_5th_kor_review.md>
 
@@ -86,12 +86,12 @@ Perl이 가지는 문법적 유연성으로 인해 어떤 방향으로든 쉽게
 
 =over
 
-=item *
+=item -
 
 L<Perl로 하는 함수형 프로그래밍|http://advent.perl.kr/2010/2010-12-14.html>
 
 
-=item *
+=item -
 
 L<Moose로 OOP하기|http://advent.perl.kr/2010/2010-12-20.html>
 
@@ -115,7 +115,7 @@ Perl 6는 현재 본격적인 개발에 사용되기에는 주변 환경이 완�
 
 =over
 
-=item *
+=item -
 
 L<Download Perl Distributions|http://www.perl.org/get.html>
 
@@ -127,17 +127,17 @@ Windows에서 Perl은 L<Strawberry Perl|http://strawberryperl.com/>과 L<ActiveS
 
 =over
 
-=item *
+=item -
 
 L<MS Windows에서 Perl 활용하기|http://advent.perl.kr/2010/2010-12-01.html>
 
 
-=item *
+=item -
 
 L<윈도우즈 환경에서 Perl은 어디에 써먹을 수 있을까?|http://advent.perl.kr/2010/2010-12-05.html>
 
 
-=item *
+=item -
 
 L<Win32 Perl Wiki|http://win32.perl.org/wiki/index.php?title=Main_Page>
 
@@ -150,12 +150,12 @@ Solaris, FreeBSD, Mac OS X, Linux 등 UNIX류 OS에는 Perl이 기본으로 설�
 
 =over
 
-=item *
+=item -
 
 L<How to Use CPAN, Actually|http://advent.perl.kr/2011/2011-12-13.html>
 
 
-=item *
+=item -
 
 L<perlbrew, local::lib, smartcd 를 이용하여 Perl 환경 구축하기|http://advent.perl.kr/2011/2011-12-16.html>
 
@@ -166,17 +166,17 @@ L<perlbrew, local::lib, smartcd 를 이용하여 Perl 환경 구축하기|http:/
 
 =over
 
-=item *
+=item -
 
 L<DotCloud|http://docs.dotcloud.com/services/perl/>
 
 
-=item *
+=item -
 
 L<Stackato|http://docs.stackato.com/perl/index.html>
 
 
-=item *
+=item -
 
 L<How to deploy the Perl Dancer framework on OpenShift Express|https://www.redhat.com/openshift/community/kb/kb-e1014-how-to-deploy-the-perl-dancer-framework-on-openshift-express>
 
@@ -195,7 +195,7 @@ Perl의 성능은 여타 스크립트 언어들에 비해
 
 =over
 
-=item *
+=item -
 
 L<Perl, Python, Ruby, PHP, C, C++, Lua, tcl, javascript and Java benchmark/comparison.|http://onlyjob.blogspot.com/2011/03/perl5-python-ruby-php-c-c-lua-tcl.html>
 
@@ -214,27 +214,27 @@ L<Perl, Python, Ruby, PHP, C, C++, Lua, tcl, javascript and Java benchmark/compa
 
 =over
 
-=item *
+=item -
 
 L<Perl 메인 싸이트|http://www.perl.org> - perl.org
 
 
-=item *
+=item -
 
 L<Perl 학습 싸이트|http://learn.perl.org> - learn.perl.org
 
 
-=item *
+=item -
 
 L<Perl 문서 싸이트|http://perldoc.perl.org/> - perldoc.perl.org
 
 
-=item *
+=item -
 
 L<Perl 5 wiki|https://www.socialtext.net/perl5/> - socialtext.net/perl5
 
 
-=item *
+=item -
 
 L<Perl 재단|http://www.perlfoundation.org/> - perlfoundation.org
 
@@ -252,27 +252,27 @@ PHP의 PEAR, R의 CRAN, Ruby의 rubygems, Python의 Pypi, Node.js의 npm 등의
 
 =over
 
-=item *
+=item -
 
 L<오리지널 CPAN 싸이트|http://www.cpan.org> - cpan.org
 
 
-=item *
+=item -
 
 L<CPAN모듈 문서에 유저들이 첨언을 넣는 싸이트|http://annocpan.org> - annocpan.org
 
 
-=item *
+=item -
 
 L<CPAN모듈의 테스트결과 및 의존관계등에 대한 통계 싸이트|http://cpantesters.org> - cpantesters.org
 
 
-=item *
+=item -
 
 L<최근에 생긴 CPAN을 좀 더 자세하고 쉽게 검색하게 해주는 싸이트|https://metacpan.org> - metacpan.org
 
 
-=item *
+=item -
 
 L<CPAN모듈들을 예쁘게 가시화해서 보여주는 싸이트|http://mapofcpan.org> - mapofcpan.org
 
@@ -286,32 +286,32 @@ L<CPAN모듈들을 예쁘게 가시화해서 보여주는 싸이트|http://mapof
 
 =over
 
-=item *
+=item -
 
 L<Perl 컨퍼런스 YAPC 정보|http://www.yapc.org/> - yapc.org
 
 
-=item *
+=item -
 
 L<YAPC Asia|http://yapcasia.org> - yapcasia.org
 
 
-=item *
+=item -
 
 L<Perl 질문/답변 싸이트|http://perlmonks.org> - perlmonks.org
 
 
-=item *
+=item -
 
 L<StackOverflow Perl 질문/답변|http://stackoverflow.com/questions/tagged/?tagnames=perl&sort=active>
 
 
-=item *
+=item -
 
 L<Reddit Perl 관련 뉴스/토론|http://www.reddit.com/r/perl/>
 
 
-=item *
+=item -
 
 L<일본 Perl 유저 그룹|http://j2k.naver.com/j2k_frame.php/korean/perl-users.jp/> (일한번역)
 
@@ -322,27 +322,27 @@ L<일본 Perl 유저 그룹|http://j2k.naver.com/j2k_frame.php/korean/perl-users
 
 =over
 
-=item *
+=item -
 
 L<한국 Perl 대표싸이트|http://perl.kr/> - perl.kr
 
 
-=item *
+=item -
 
 L<서울 Perl 몽거스|http://seoul.pm> - seoul.pm
 
 
-=item *
+=item -
 
 L<네이버 Perl 카페|http://cafe.naver.com/perlstudy> - cafe.naver.com/perlstudy
 
 
-=item *
+=item -
 
 L<서울 Perl 몽거스 크리스마스 달력|http://advent.perl.kr> - advent.perl.kr
 
 
-=item *
+=item -
 
 L<#perl-kr IRC 채팅|http://webchat.freenode.net/?channels=perl-kr>
 
@@ -357,52 +357,52 @@ L<#perl-kr IRC 채팅|http://webchat.freenode.net/?channels=perl-kr>
 
 =over
 
-=item *
+=item -
 
 L<Perl.com|http://www.perl.com/> - perl.com
 
 
-=item *
+=item -
 
 L<Perl 5 언어 개발 메일링 리스트|http://www.nntp.perl.org/group/perl.perl5.porters/> (Perl 5 Porters)
 
 
-=item *
+=item -
 
 L<Perl 커뮤니티 블로그 플랫폼|http://blogs.perl.org/> - blogs.perl.org
 
 
-=item *
+=item -
 
 L<Perl 뉴스|http://perlnews.org/> - perlnews.org
 
 
-=item *
+=item -
 
 L<Perl 블로그 포스트 집합소|http://ironman.enlightenedperl.org/> - ironman.enlightenedperl.org
 
 
-=item *
+=item -
 
 L<Perl 블로그 포스트 집합소|http://perlsphere.net/> - perlsphere.net
 
 
-=item *
+=item -
 
 L<주간지 이메일 아티클 모음|http://perlweekly.com/> - perlweekly.com
 
 
-=item *
+=item -
 
 L<Perl 빅 이슈 모음|http://perlbuzz.com/> - perlbuzz.com
 
 
-=item *
+=item -
 
 L<Perl 생태계를 총체적으로 아우르는 주옥같은 지혜들|http://www.modernperlbooks.com> - modernperlbooks.com
 
 
-=item *
+=item -
 
 L<Perl 재단 뉴스|http://news.perlfoundation.org/> - news.perlfoundation.org
 
@@ -421,124 +421,124 @@ L<Perl 재단 뉴스|http://news.perlfoundation.org/> - news.perlfoundation.org
 
 =over
 
-=item *
+=item -
 
 L<Plack|http://plackperl.org/> - 표준적인 웹서버/웹어플리케이션 인터페이스
 
 
-=item *
+=item -
 
 L<Deploying Plack Web Applications|http://www.slideshare.net/miyagawa/deploying-plack-web-applications-oscon-2011-8706659>
 
 
-=item *
+=item -
 
 L<Tatsumaki로 비동기 웹 서비스 구축하기|http://advent.perl.kr/2011/2011-12-19.html>
 
 
-=item *
+=item -
 
 L<Catalyst|http://www.catalystframework.org/> - 본격적인 Perl 웹 프레임워크(Ruby의 Rails와 Python의 Django 급)
 
 
-=item *
+=item -
 
 대표적인 레퍼런스 싸이트는 L<BBC iplayer|http://www.bbc.co.uk/iplayer/>와 세계 최대 성인 동영상 싸이트 Youp*rn
 
 
-=item *
+=item -
 
 L<Catalyst vs Ruby on Rails|http://www.wikivs.com/wiki/Catalyst_vs_Ruby_on_Rails>
 
 
-=item *
+=item -
 
 L<남미 W3C 주최 공공정보 웹서비스화 경연대회 Perl Catalyst팀 우승|http://mdk.per.ly/2011/12/06/perl-rocks-latin-america/>
 
 
-=item *
+=item -
 
 L<Dancer|http://perldancer.org/> - 경량 웹 프레임워크 (Ruby의 Sintara와 Python의 Flask 급)
 
 
-=item *
+=item -
 
 L<Perl Dancer for Python programmer|http://www.slideshare.net/xSawyer/perl-dancer-for-python-programmers>
 
 
-=item *
+=item -
 
 L<초소형 프레임워크와 함께 춤을|http://advent.perl.kr/2011/2011-12-06.html>
 
 
-=item *
+=item -
 
 L<Mojolicious|http://mojolicio.us/> - 리얼타임 웹 프레임워크
 
 
-=item *
+=item -
 
 L<Mojolicious, HTML5, WebSocket을 이용한 비동기 채팅|http://advent.perl.kr/2011/2011-12-20.html>
 
 
-=item *
+=item -
 
 L<기타 Perl 웹 프레임웍들|https://www.socialtext.net/perl5/web_frameworks>
 
 
-=item *
+=item -
 
 L<Pocket.io|https://metacpan.org/release/PocketIO> - Socket.IO Plack application
 
 
-=item *
+=item -
 
 L<Monday Newbie Corner: Long polling / realtime Web applications?|http://jjnapiorkowski.typepad.com/modern-perl/2011/09/monday-newbie-corner-long-polling-realtime-web-applications.html>
 
 
-=item *
+=item -
 
 L<Web::Hippie|https://metacpan.org/release/Web-Hippie> - Web toolkit for the long hair, or comet
 
 
-=item *
+=item -
 
 L<AnyMQ, Hippie, and the realtime web|http://www.slideshare.net/clkao/anymq-hippie-and-the-realtime-web>
 
 
-=item *
+=item -
 
 L<TIMTOW to build a WebSocket server in Perl|http://showmetheco.de/articles/2010/11/timtow-to-build-a-websocket-server-in-perl.html>
 
 
 
-=item *
+=item -
 
 L<Template Toolkit|http://template-toolkit.org/>
 
 
-=item *
+=item -
 
 L<Xslate|http://xslate.org/> - Scalable template engine for Perl5
 
 
 
-=item *
+=item -
 
 대표적 ORM
 
 
-=item *
+=item -
 
 L<DBIx::Class for beginners|http://www.slideshare.net/ranguard/dbixclass-introduction-2010>
 
 
-=item *
+=item -
 
 L<DBIx::Class로 스키마 관리하기|http://advent.perl.kr/2011/2011-12-17.html>
 
 
-=item *
+=item -
 
 L<Fey, Fey, Fey|http://advent.perl.kr/2010/2010-12-11.html>
 
@@ -559,17 +559,17 @@ AnyEvent에 쓰기위해 만든 L<libev|https://metacpan.org/module/libev>는 �
 
 =over
 
-=item *
+=item -
 
 L<AnyEvent 모듈|https://metacpan.org/search?q=anyevent>
 
 
-=item *
+=item -
 
 L<Coro 모듈|https://metacpan.org/release/Coro>
 
 
-=item *
+=item -
 
 L<POE 공식 사이트|http://poe.perl.org/>
 
@@ -580,22 +580,22 @@ L<POE 공식 사이트|http://poe.perl.org/>
 
 =over
 
-=item *
+=item -
 
 L<A Threading Model Overview|http://justin.harmonize.fm/index.php/2008/09/threading-model-overview/>
 
 
-=item *
+=item -
 
 L<Why Perl Is a Great Language for Concurrent Programming|http://t-a-w.blogspot.com/2006/10/why-perl-is-great-language-for.html>
 
 
-=item *
+=item -
 
 L<Parallel Processing Perl Modules|http://www.openfusion.net/perl/parallel_processing_perl_modules>
 
 
-=item *
+=item -
 
 L<how to write fast server with perl|http://d.hatena.ne.jp/tokuhirom/20090924/1253758449>
 
@@ -607,118 +607,118 @@ L<how to write fast server with perl|http://d.hatena.ne.jp/tokuhirom/20090924/12
 
 =over
 
-=item *
+=item -
 
 L<GTK2|https://metacpan.org/release/Gtk2>
 
 
-=item *
+=item -
 
 L<gtk2-perl home|http://gtk2-perl.sourceforge.net/>
 
 
-=item *
+=item -
 
 L<Gtk2 programming with DSL|http://advent.perl.kr/2010/2010-12-24.html>
 
 
-=item *
+=item -
 
 L<GTK3|https://metacpan.org/release/Gtk3>
 
 
-=item *
+=item -
 
 L<Win32::GUI|https://metacpan.org/release/Win32-GUI>
 
 
-=item *
+=item -
 
 L<윈도우 환경에서 화면 캡쳐 후 자동 저장 기능의 구현|http://advent.perl.kr/2011/2011-12-07.html>
 
 
 
-=item *
+=item -
 
 L<wxWidgets|https://metacpan.org/release/Wx>
 
 
-=item *
+=item -
 
 L<wxWidgets기반 Perl IDE Padre|http://padre.perlide.org/>
 
 
-=item *
+=item -
 
 L<Tk|https://metacpan.org/release/Tk>
 
 
-=item *
+=item -
 
 L<Tkx|https://metacpan.org/release/Tkx>
 
 
-=item *
+=item -
 
 L<Qt|https://metacpan.org/release/Qt>
 
 
-=item *
+=item -
 
 L<Prima|https://metacpan.org/release/Prima>
 
 
-=item *
+=item -
 
 L<한 이미지 안에 들어있는 사진들 추출하기 Prima 모듈|http://advent.perl.kr/2011/2011-12-15.html>
 
 
-=item *
+=item -
 
 L<IUP|https://metacpan.org/release/IUP>
 
 
-=item *
+=item -
 
 L<FLTK|https://metacpan.org/release/FLTK>
 
 
-=item *
+=item -
 
 L<XUL|https://metacpan.org/release/XUL-Gui>
 
 
-=item *
+=item -
 
 L<GD|https://metacpan.org/release/GD>
 
 
-=item *
+=item -
 
 L<Imager|https://metacpan.org/release/Imager>
 
 
-=item *
+=item -
 
 L<ImageMagick|https://metacpan.org/release/PerlMagick>
 
 
-=item *
+=item -
 
 L<SDL|https://metacpan.org/release/SDL>
 
 
-=item *
+=item -
 
 L<Perl SDL|http://sdl.perl.org>
 
 
-=item *
+=item -
 
 L<OpenGL|https://metacpan.org/release/OpenGL>
 
 
-=item *
+=item -
 
 L<Games::Construder|http://ue.o---o.eu/>
 
@@ -730,62 +730,62 @@ L<Games::Construder|http://ue.o---o.eu/>
 
 =over
 
-=item *
+=item -
 
 L<PDL|http://pdl.perl.org/> - Perl Data Language, Scientific computing with Perl
 
 
-=item *
+=item -
 
 L<Generating cool fractrals Matlab vs PDL and others|http://www.freesoftwaremagazine.com/articles/cool_fractals_with_perl_pdl_a_benchmark>
 
 
-=item *
+=item -
 
 L<Math modules|https://metacpan.org/search?q=Math>
 
 
-=item *
+=item -
 
 L<SOOT|https://metacpan.org/release/SOOT> - Use L<ROOT|http://root.cern.ch/drupal/> in Perl
 
 
-=item *
+=item -
 
 L<BioPerl|http://www.bioperl.org> - Perl tools for bioinformatics, genomics and life science
 
 
-=item *
+=item -
 
 L<Perl과 생명정보학|http://advent.perl.kr/2010/2010-12-18.html>
 
 
-=item *
+=item -
 
 L<NCBI PubMed와 Perl|http://advent.perl.kr/2011/2011-12-05.html>
 
 
-=item *
+=item -
 
 L<Circos|http://circos.ca/> - Circular visualization
 
 
-=item *
+=item -
 
 L<PDL::Stats|http://pdl-stats.sourceforge.net/> - a collection of statistics modules in Perl Data Language
 
 
-=item *
+=item -
 
 L<Statistics::R|https://metacpan.org/release/Statistics-R> - Perl interface with the R statistical program
 
 
-=item *
+=item -
 
 L<recommendations on scientific computing with Perl|http://www.perlmonks.org/?node_id=599596>
 
 
-=item *
+=item -
 
 L<Perl & Math: A Quick Reference|http://www.perlmonks.org/?node_id=284324>
 
@@ -802,32 +802,32 @@ CPAN에는 SSH, Telnet, FTP, SNMP 등 각종 시스템 관리에 필요한 모�
 
 =over
 
-=item *
+=item -
 
 L<Automating System Administration with Perl|http://shop.oreilly.com/product/9780596006396.do?green=f33d6c9a-04e8-4123-ac41-044b892a51c9&cmp=af-mybuy-9780596006396.IP>
 
 
-=item *
+=item -
 
 L<Perl for System Administration - Perl Training Australia|http://perltraining.com.au/notes/sysadmin.pdf>
 
 
-=item *
+=item -
 
 L<slack|http://code.google.com/p/slack/> 
 
 
-=item *
+=item -
 
 L<slack 소개|http://wiki.kldp.org/wiki.php/SlackHowto>
 
 
-=item *
+=item -
 
 L<Rex|http://rexify.org/> - 시스템관리 자동화 툴
 
 
-=item *
+=item -
 
 L<Opsview|http://www.opsview.com> - Catalyst 웹프레임워크, Nagios 기반 모니터링 시스템
 
@@ -839,37 +839,37 @@ L<Opsview|http://www.opsview.com> - Catalyst 웹프레임워크, Nagios 기반 �
 
 =over
 
-=item *
+=item -
 
 L<PAR::Packer|https://metacpan.org/release/PAR-Packer>
 
 
-=item *
+=item -
 
 L<Perl로 GUI로 프로그래밍해서 exe로 배포하고 싶다면?|http://mabook.com/blog/entry/perl-%BF%A1%BC%AD-Wx-%BF%CD-PAR-%C6%A9%C5%E4%B8%AE%BE%F3>
 
 
-=item *
+=item -
 
 L<Perl을 EXE로 배포해보자|http://happydal.blogspot.com/2010/08/perl-%EC%9D%84-exe%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EC%9E%90.html>
 
 
-=item *
+=item -
 
 L<CavaPackager|http://www.cava.co.uk/>
 
 
-=item *
+=item -
 
 L<Cava Packager 사용기|http://honeyperl.tistory.com/entry/Tool-Cava-Packager>
 
 
-=item *
+=item -
 
 L<PerlApp|http://www.activestate.com/perl-dev-kit>
 
 
-=item *
+=item -
 
 L<Perl에서의 컴파일과 크로스플랫폼 지원 정보|http://blog.naver.com/PostView.nhn?blogId=pulsori&logNo=140050516302>
 

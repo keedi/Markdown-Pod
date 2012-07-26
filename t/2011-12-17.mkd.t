@@ -339,37 +339,37 @@ C<custom_column_info> 속성에 코드를 등록해 지정할 수 있습니다.
 
 =over
 
-=item *
+=item -
 
 L<DBIx::Class::Schema::Loader|http://search.cpan.org/perldoc?DBIx::Class::Schema::Loader>로 스키마 클래스를 덤프합니다.
 
 
-=item *
+=item -
 
 결과 클래스 안의 MD5 체크섬 값에 유의하여 특정 부분 위의 코드는 건드리지 않습니다.
 
 
-=item *
+=item -
 
 C<ResultBase> 같은 기본 클래스를 두고 결과클래스 내의 공용 메소드, 컴포넌트들을 일괄로 정의하고 관리하도록 합니다.
 
 
-=item *
+=item -
 
 설정 파일을 이용해 추가 속성이 필요한 컬럼 등을 지정할 수 있습니다.
 
 
-=item *
+=item -
 
 C<DBIx::Class>는 나쁘지 않습니다.
 
 
-=item *
+=item -
 
 여타 설정 항목들에 대해서는 L<DBIx::Class::Schema::Loader::Base|http://search.cpan.org/perldoc?DBIx::Class::Schema::Loader::Base> 모듈 문서를 참고합니다.
 
 
-=item *
+=item -
 
 이 모든 작업에 논의와 영감을 준 L<@aanoaa|http://www.twitter.com/aanoaa>(a.k.a. 홍선생)님에게 경의를 표합니다.
 

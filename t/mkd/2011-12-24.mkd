@@ -80,22 +80,22 @@ Perl 설치와 모듈 설치
 Windows에서 Perl은 [Strawberry Perl][strawberry]과 [ActiveState Perl][activestate]이 있습니다.
 사용 예는 다음을 링크를 참고하세요.
 
-* [MS Windows에서 Perl 활용하기][windows-perl-usage]
-* [윈도우즈 환경에서 Perl은 어디에 써먹을 수 있을까?][windows-perl-use-where]
-* [Win32 Perl Wiki][windows-perl-wiki]
+- [MS Windows에서 Perl 활용하기][windows-perl-usage]
+- [윈도우즈 환경에서 Perl은 어디에 써먹을 수 있을까?][windows-perl-use-where]
+- [Win32 Perl Wiki][windows-perl-wiki]
 
 Solaris, FreeBSD, Mac OS X, Linux 등 UNIX류 OS에는 Perl이 기본으로 설치되어 있습니다.
 하지만 다른 패키지들이 의존하고 있는 시스템의 기본 Perl은 건드리지 않고 
 최신 버전의 Perl이나 모듈을 나름대로 독립적인 환경에서 설치하여 쓰려면 다음 글을 참고합니다.
 
-* [How to Use CPAN, Actually][advent-2011-12-13]
-* [perlbrew, local::lib, smartcd 를 이용하여 Perl 환경 구축하기][advent-2011-12-16]
+- [How to Use CPAN, Actually][advent-2011-12-13]
+- [perlbrew, local::lib, smartcd 를 이용하여 Perl 환경 구축하기][advent-2011-12-16]
 
 요즘은 여러 PaaS(Platform as a Service) Cloud 서비스에서 Perl을 지원하고 있습니다.
 
-* [DotCloud][dotcloud]
-* [Stackato][stackato]
-* [How to deploy the Perl Dancer framework on OpenShift Express][openshift-dancer]
+- [DotCloud][dotcloud]
+- [Stackato][stackato]
+- [How to deploy the Perl Dancer framework on OpenShift Express][openshift-dancer]
 
 
 Perl의 성능은 어떤가?
@@ -108,7 +108,7 @@ Perl의 성능은 여타 스크립트 언어들에 비해
 메모리를 효율적으로 다루는가에 초점을 맞춘 벤치마크 자료입니다.
 결과를 보면 Perl이 C, C++, PHP, Python, Ruby 등을 제치고 1등의 성능을 보여주고 있음을 볼 수 있습니다.
 
-* [Perl, Python, Ruby, PHP, C, C++, Lua, tcl, javascript and Java benchmark/comparison.][benchmark-comparison]
+- [Perl, Python, Ruby, PHP, C, C++, Lua, tcl, javascript and Java benchmark/comparison.][benchmark-comparison]
 
 벤치마크 결과에 이견이 있을 수는 있지만
 별다른 테크닉을 사용하지 않고 평이한 문법을 그대로 사용한 상태에서
@@ -120,11 +120,11 @@ Perl 관련 싸이트는?
 
 ### Perl 언어관련
 
-* [Perl 메인 싸이트](http://www.perl.org) - perl.org
-* [Perl 학습 싸이트](http://learn.perl.org) - learn.perl.org
-* [Perl 문서 싸이트](http://perldoc.perl.org/) - perldoc.perl.org
-* [Perl 5 wiki](https://www.socialtext.net/perl5/) - socialtext.net/perl5
-* [Perl 재단](http://www.perlfoundation.org/) - perlfoundation.org
+- [Perl 메인 싸이트](http://www.perl.org) - perl.org
+- [Perl 학습 싸이트](http://learn.perl.org) - learn.perl.org
+- [Perl 문서 싸이트](http://perldoc.perl.org/) - perldoc.perl.org
+- [Perl 5 wiki](https://www.socialtext.net/perl5/) - socialtext.net/perl5
+- [Perl 재단](http://www.perlfoundation.org/) - perlfoundation.org
 
 ### CPAN 모듈 관련
 
@@ -134,46 +134,46 @@ CPAN의 모듈수는 10만개를 넘는 수준으로 타의 추종을 불허하�
 PHP의 PEAR, R의 CRAN, Ruby의 rubygems, Python의 Pypi, Node.js의 npm 등의
 모듈 저장소들이 CPAN의 모델을 따라 만들어 졌습니다.
 
-* [오리지널 CPAN 싸이트](http://www.cpan.org) - cpan.org
-* [CPAN모듈 문서에 유저들이 첨언을 넣는 싸이트](http://annocpan.org) - annocpan.org
-* [CPAN모듈의 테스트결과 및 의존관계등에 대한 통계 싸이트](http://cpantesters.org) - cpantesters.org
-* [최근에 생긴 CPAN을 좀 더 자세하고 쉽게 검색하게 해주는 싸이트](https://metacpan.org) - metacpan.org
-* [CPAN모듈들을 예쁘게 가시화해서 보여주는 싸이트](http://mapofcpan.org) - mapofcpan.org
+- [오리지널 CPAN 싸이트](http://www.cpan.org) - cpan.org
+- [CPAN모듈 문서에 유저들이 첨언을 넣는 싸이트](http://annocpan.org) - annocpan.org
+- [CPAN모듈의 테스트결과 및 의존관계등에 대한 통계 싸이트](http://cpantesters.org) - cpantesters.org
+- [최근에 생긴 CPAN을 좀 더 자세하고 쉽게 검색하게 해주는 싸이트](https://metacpan.org) - metacpan.org
+- [CPAN모듈들을 예쁘게 가시화해서 보여주는 싸이트](http://mapofcpan.org) - mapofcpan.org
 
 ### Perl 관련 커뮤니티 싸이트
 
 외국:
 
-* [Perl 컨퍼런스 YAPC 정보](http://www.yapc.org/) - yapc.org
-* [YAPC Asia](http://yapcasia.org) - yapcasia.org
-* [Perl 질문/답변 싸이트](http://perlmonks.org) - perlmonks.org
-* [StackOverflow Perl 질문/답변](http://stackoverflow.com/questions/tagged/?tagnames=perl&sort=active)
-* [Reddit Perl 관련 뉴스/토론](http://www.reddit.com/r/perl/)
-* [일본 Perl 유저 그룹](http://j2k.naver.com/j2k_frame.php/korean/perl-users.jp/) (일한번역)
+- [Perl 컨퍼런스 YAPC 정보](http://www.yapc.org/) - yapc.org
+- [YAPC Asia](http://yapcasia.org) - yapcasia.org
+- [Perl 질문/답변 싸이트](http://perlmonks.org) - perlmonks.org
+- [StackOverflow Perl 질문/답변](http://stackoverflow.com/questions/tagged/?tagnames=perl&sort=active)
+- [Reddit Perl 관련 뉴스/토론](http://www.reddit.com/r/perl/)
+- [일본 Perl 유저 그룹](http://j2k.naver.com/j2k_frame.php/korean/perl-users.jp/) (일한번역)
 
 한국:
 
-* [한국 Perl 대표싸이트](http://perl.kr/) - perl.kr
-* [서울 Perl 몽거스](http://seoul.pm) - seoul.pm
-* [네이버 Perl 카페](http://cafe.naver.com/perlstudy) - cafe.naver.com/perlstudy
-* [서울 Perl 몽거스 크리스마스 달력](http://advent.perl.kr) - advent.perl.kr
-* [#perl-kr IRC 채팅](http://webchat.freenode.net/?channels=perl-kr)
+- [한국 Perl 대표싸이트](http://perl.kr/) - perl.kr
+- [서울 Perl 몽거스](http://seoul.pm) - seoul.pm
+- [네이버 Perl 카페](http://cafe.naver.com/perlstudy) - cafe.naver.com/perlstudy
+- [서울 Perl 몽거스 크리스마스 달력](http://advent.perl.kr) - advent.perl.kr
+- [#perl-kr IRC 채팅](http://webchat.freenode.net/?channels=perl-kr)
 
 ### Perl 뉴스 및 정보 싸이트
 
 다음은 Perl의 최신 소식을 가장 빠르게 받아볼 수 있는 싸이트입니다.
 관심있다는 사이트의 RSS를 구독하면 도움이 될 것입니다.
 
-* [Perl.com](http://www.perl.com/) - perl.com
-* [Perl 5 언어 개발 메일링 리스트](http://www.nntp.perl.org/group/perl.perl5.porters/) (Perl 5 Porters)
-* [Perl 커뮤니티 블로그 플랫폼](http://blogs.perl.org/) - blogs.perl.org
-* [Perl 뉴스](http://perlnews.org/) - perlnews.org
-* [Perl 블로그 포스트 집합소](http://ironman.enlightenedperl.org/) - ironman.enlightenedperl.org
-* [Perl 블로그 포스트 집합소](http://perlsphere.net/) - perlsphere.net
-* [주간지 이메일 아티클 모음](http://perlweekly.com/) - perlweekly.com
-* [Perl 빅 이슈 모음](http://perlbuzz.com/) - perlbuzz.com
-* [Perl 생태계를 총체적으로 아우르는 주옥같은 지혜들](http://www.modernperlbooks.com) - modernperlbooks.com
-* [Perl 재단 뉴스](http://news.perlfoundation.org/) - news.perlfoundation.org
+- [Perl.com](http://www.perl.com/) - perl.com
+- [Perl 5 언어 개발 메일링 리스트](http://www.nntp.perl.org/group/perl.perl5.porters/) (Perl 5 Porters)
+- [Perl 커뮤니티 블로그 플랫폼](http://blogs.perl.org/) - blogs.perl.org
+- [Perl 뉴스](http://perlnews.org/) - perlnews.org
+- [Perl 블로그 포스트 집합소](http://ironman.enlightenedperl.org/) - ironman.enlightenedperl.org
+- [Perl 블로그 포스트 집합소](http://perlsphere.net/) - perlsphere.net
+- [주간지 이메일 아티클 모음](http://perlweekly.com/) - perlweekly.com
+- [Perl 빅 이슈 모음](http://perlbuzz.com/) - perlbuzz.com
+- [Perl 생태계를 총체적으로 아우르는 주옥같은 지혜들](http://www.modernperlbooks.com) - modernperlbooks.com
+- [Perl 재단 뉴스](http://news.perlfoundation.org/) - news.perlfoundation.org
 
 
 Perl 관련 프레임웍 및 기술
@@ -185,29 +185,29 @@ Perl 관련 프레임웍 및 기술
 웹서버/캐시레이어/프락시/미들웨어/웹어플리케이션 등의 레이어가 세분화된 프레임웍 기반의 개발이
 대세가 되고 있습니다. Perl은 이런 시대적 흐름에 맞춘 각종 웹 관련 프레임웍을 갖추고 있습니다.
 
-* [Plack](http://plackperl.org/) - 표준적인 웹서버/웹어플리케이션 인터페이스
+- [Plack](http://plackperl.org/) - 표준적인 웹서버/웹어플리케이션 인터페이스
  - [Deploying Plack Web Applications](http://www.slideshare.net/miyagawa/deploying-plack-web-applications-oscon-2011-8706659)
  - [Tatsumaki로 비동기 웹 서비스 구축하기](http://advent.perl.kr/2011/2011-12-19.html)
-* [Catalyst](http://www.catalystframework.org/) - 본격적인 Perl 웹 프레임워크(Ruby의 Rails와 Python의 Django 급)
+- [Catalyst](http://www.catalystframework.org/) - 본격적인 Perl 웹 프레임워크(Ruby의 Rails와 Python의 Django 급)
  - 대표적인 레퍼런스 싸이트는 [BBC iplayer](http://www.bbc.co.uk/iplayer/)와 세계 최대 성인 동영상 싸이트 Youp*rn
  - [Catalyst vs Ruby on Rails](http://www.wikivs.com/wiki/Catalyst_vs_Ruby_on_Rails)
  - [남미 W3C 주최 공공정보 웹서비스화 경연대회 Perl Catalyst팀 우승](http://mdk.per.ly/2011/12/06/perl-rocks-latin-america/)
-* [Dancer](http://perldancer.org/) - 경량 웹 프레임워크 (Ruby의 Sintara와 Python의 Flask 급)
+- [Dancer](http://perldancer.org/) - 경량 웹 프레임워크 (Ruby의 Sintara와 Python의 Flask 급)
  - [Perl Dancer for Python programmer](http://www.slideshare.net/xSawyer/perl-dancer-for-python-programmers)
  - [초소형 프레임워크와 함께 춤을](http://advent.perl.kr/2011/2011-12-06.html)
-* [Mojolicious](http://mojolicio.us/) - 리얼타임 웹 프레임워크
+- [Mojolicious](http://mojolicio.us/) - 리얼타임 웹 프레임워크
  - [Mojolicious, HTML5, WebSocket을 이용한 비동기 채팅](http://advent.perl.kr/2011/2011-12-20.html)
-* [기타 Perl 웹 프레임웍들](https://www.socialtext.net/perl5/web_frameworks)
-* [Pocket.io](https://metacpan.org/release/PocketIO) - Socket.IO Plack application
+- [기타 Perl 웹 프레임웍들](https://www.socialtext.net/perl5/web_frameworks)
+- [Pocket.io](https://metacpan.org/release/PocketIO) - Socket.IO Plack application
  - [Monday Newbie Corner: Long polling / realtime Web applications?](http://jjnapiorkowski.typepad.com/modern-perl/2011/09/monday-newbie-corner-long-polling-realtime-web-applications.html)
-* [Web::Hippie](https://metacpan.org/release/Web-Hippie) - Web toolkit for the long hair, or comet
+- [Web::Hippie](https://metacpan.org/release/Web-Hippie) - Web toolkit for the long hair, or comet
  - [AnyMQ, Hippie, and the realtime web](http://www.slideshare.net/clkao/anymq-hippie-and-the-realtime-web)
  - [TIMTOW to build a WebSocket server in Perl](http://showmetheco.de/articles/2010/11/timtow-to-build-a-websocket-server-in-perl.html)
 
-* [Template Toolkit](http://template-toolkit.org/)
-* [Xslate](http://xslate.org/) - Scalable template engine for Perl5
+- [Template Toolkit](http://template-toolkit.org/)
+- [Xslate](http://xslate.org/) - Scalable template engine for Perl5
 
-* 대표적 ORM
+- 대표적 ORM
  - [DBIx::Class for beginners](http://www.slideshare.net/ranguard/dbixclass-introduction-2010)
  - [DBIx::Class로 스키마 관리하기](http://advent.perl.kr/2011/2011-12-17.html)
  - [Fey, Fey, Fey](http://advent.perl.kr/2010/2010-12-11.html)
@@ -223,58 +223,58 @@ Perl의 Thread는 Python, Ruby와 다르게 GIL(Global Interpreter Lock)이 없�
 AnyEvent에 쓰기위해 만든 [libev][metacpan-libev]는 우수한 성능이
 입증되어 Python의 Twisted, Ruby의 EventMachine, Node.js에서도 기반 라이브러리로 가져다 쓰고 있습니다.
 
-* [AnyEvent 모듈][metacpan-anyevent]
-* [Coro 모듈][metacpan-coro]
-* [POE 공식 사이트][poe]
+- [AnyEvent 모듈][metacpan-anyevent]
+- [Coro 모듈][metacpan-coro]
+- [POE 공식 사이트][poe]
 
 참고 글:
 
-* [A Threading Model Overview](http://justin.harmonize.fm/index.php/2008/09/threading-model-overview/)
-* [Why Perl Is a Great Language for Concurrent Programming](http://t-a-w.blogspot.com/2006/10/why-perl-is-great-language-for.html)
-* [Parallel Processing Perl Modules](http://www.openfusion.net/perl/parallel_processing_perl_modules)
-* [how to write fast server with perl](http://d.hatena.ne.jp/tokuhirom/20090924/1253758449)
+- [A Threading Model Overview](http://justin.harmonize.fm/index.php/2008/09/threading-model-overview/)
+- [Why Perl Is a Great Language for Concurrent Programming](http://t-a-w.blogspot.com/2006/10/why-perl-is-great-language-for.html)
+- [Parallel Processing Perl Modules](http://www.openfusion.net/perl/parallel_processing_perl_modules)
+- [how to write fast server with perl](http://d.hatena.ne.jp/tokuhirom/20090924/1253758449)
 
 ### GUI 및 그래픽
 
-* [GTK2]( https://metacpan.org/release/Gtk2)
+- [GTK2]( https://metacpan.org/release/Gtk2)
  - [gtk2-perl home](http://gtk2-perl.sourceforge.net/)
  - [Gtk2 programming with DSL](http://advent.perl.kr/2010/2010-12-24.html)
-* [GTK3](https://metacpan.org/release/Gtk3)
-* [Win32::GUI](https://metacpan.org/release/Win32-GUI)
+- [GTK3](https://metacpan.org/release/Gtk3)
+- [Win32::GUI](https://metacpan.org/release/Win32-GUI)
  - [윈도우 환경에서 화면 캡쳐 후 자동 저장 기능의 구현](http://advent.perl.kr/2011/2011-12-07.html)
  
-* [wxWidgets](https://metacpan.org/release/Wx)
+- [wxWidgets](https://metacpan.org/release/Wx)
  - [wxWidgets기반 Perl IDE Padre](http://padre.perlide.org/)
-* [Tk](https://metacpan.org/release/Tk)
-* [Tkx](https://metacpan.org/release/Tkx)
-* [Qt](https://metacpan.org/release/Qt)
-* [Prima](https://metacpan.org/release/Prima)
+- [Tk](https://metacpan.org/release/Tk)
+- [Tkx](https://metacpan.org/release/Tkx)
+- [Qt](https://metacpan.org/release/Qt)
+- [Prima](https://metacpan.org/release/Prima)
  - [한 이미지 안에 들어있는 사진들 추출하기 Prima 모듈](http://advent.perl.kr/2011/2011-12-15.html)
-* [IUP](https://metacpan.org/release/IUP)
-* [FLTK](https://metacpan.org/release/FLTK)
-* [XUL](https://metacpan.org/release/XUL-Gui)
-* [GD](https://metacpan.org/release/GD)
-* [Imager](https://metacpan.org/release/Imager)
-* [ImageMagick](https://metacpan.org/release/PerlMagick)
-* [SDL](https://metacpan.org/release/SDL)
+- [IUP](https://metacpan.org/release/IUP)
+- [FLTK](https://metacpan.org/release/FLTK)
+- [XUL](https://metacpan.org/release/XUL-Gui)
+- [GD](https://metacpan.org/release/GD)
+- [Imager](https://metacpan.org/release/Imager)
+- [ImageMagick](https://metacpan.org/release/PerlMagick)
+- [SDL](https://metacpan.org/release/SDL)
  - [Perl SDL](http://sdl.perl.org)
-* [OpenGL](https://metacpan.org/release/OpenGL)
+- [OpenGL](https://metacpan.org/release/OpenGL)
  - [Games::Construder](http://ue.o---o.eu/)
 
 ### 과학 및 수치계산
 
-* [PDL](http://pdl.perl.org/) - Perl Data Language, Scientific computing with Perl
+- [PDL](http://pdl.perl.org/) - Perl Data Language, Scientific computing with Perl
  - [Generating cool fractrals Matlab vs PDL and others](http://www.freesoftwaremagazine.com/articles/cool_fractals_with_perl_pdl_a_benchmark)
-* [Math modules](https://metacpan.org/search?q=Math)
-* [SOOT](https://metacpan.org/release/SOOT) - Use [ROOT](http://root.cern.ch/drupal/) in Perl
-* [BioPerl](http://www.bioperl.org) - Perl tools for bioinformatics, genomics and life science
+- [Math modules](https://metacpan.org/search?q=Math)
+- [SOOT](https://metacpan.org/release/SOOT) - Use [ROOT](http://root.cern.ch/drupal/) in Perl
+- [BioPerl](http://www.bioperl.org) - Perl tools for bioinformatics, genomics and life science
  - [Perl과 생명정보학](http://advent.perl.kr/2010/2010-12-18.html)
  - [NCBI PubMed와 Perl](http://advent.perl.kr/2011/2011-12-05.html)
-* [Circos](http://circos.ca/) - Circular visualization
-* [PDL::Stats](http://pdl-stats.sourceforge.net/) - a collection of statistics modules in Perl Data Language
-* [Statistics::R](https://metacpan.org/release/Statistics-R) - Perl interface with the R statistical program
-* [recommendations on scientific computing with Perl](http://www.perlmonks.org/?node_id=599596)
-* [Perl & Math: A Quick Reference](http://www.perlmonks.org/?node_id=284324)
+- [Circos](http://circos.ca/) - Circular visualization
+- [PDL::Stats](http://pdl-stats.sourceforge.net/) - a collection of statistics modules in Perl Data Language
+- [Statistics::R](https://metacpan.org/release/Statistics-R) - Perl interface with the R statistical program
+- [recommendations on scientific computing with Perl](http://www.perlmonks.org/?node_id=599596)
+- [Perl & Math: A Quick Reference](http://www.perlmonks.org/?node_id=284324)
 
 
 ### 시스템관리 및 자동화
@@ -284,22 +284,22 @@ Perl은 Linux/UNIX류 운영체제라면 어디에나 기본적으로 설치되�
 안정적이고 텍스트 처리에 뛰어나다는 장점 때문에 시스템 관리에 주류 언어로 사용되어 왔습니다.
 CPAN에는 SSH, Telnet, FTP, SNMP 등 각종 시스템 관리에 필요한 모듈과 툴이 넘쳐납니다.
 
-* [Automating System Administration with Perl](http://shop.oreilly.com/product/9780596006396.do?green=f33d6c9a-04e8-4123-ac41-044b892a51c9&cmp=af-mybuy-9780596006396.IP)
-* [Perl for System Administration - Perl Training Australia](http://perltraining.com.au/notes/sysadmin.pdf)
-* [slack](http://code.google.com/p/slack/) 
+- [Automating System Administration with Perl](http://shop.oreilly.com/product/9780596006396.do?green=f33d6c9a-04e8-4123-ac41-044b892a51c9&cmp=af-mybuy-9780596006396.IP)
+- [Perl for System Administration - Perl Training Australia](http://perltraining.com.au/notes/sysadmin.pdf)
+- [slack](http://code.google.com/p/slack/) 
  - [slack 소개](http://wiki.kldp.org/wiki.php/SlackHowto)
-* [Rex](http://rexify.org/) - 시스템관리 자동화 툴
-* [Opsview](http://www.opsview.com) - Catalyst 웹프레임워크, Nagios 기반 모니터링 시스템
+- [Rex](http://rexify.org/) - 시스템관리 자동화 툴
+- [Opsview](http://www.opsview.com) - Catalyst 웹프레임워크, Nagios 기반 모니터링 시스템
 
 ### 단일파일 배포 및 패키징
 
-* [PAR::Packer](https://metacpan.org/release/PAR-Packer)
+- [PAR::Packer](https://metacpan.org/release/PAR-Packer)
  - [Perl로 GUI로 프로그래밍해서 exe로 배포하고 싶다면?](http://mabook.com/blog/entry/perl-%BF%A1%BC%AD-Wx-%BF%CD-PAR-%C6%A9%C5%E4%B8%AE%BE%F3)
  - [Perl을 EXE로 배포해보자](http://happydal.blogspot.com/2010/08/perl-%EC%9D%84-exe%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EC%9E%90.html)
-* [CavaPackager](http://www.cava.co.uk/)
+- [CavaPackager](http://www.cava.co.uk/)
  - [Cava Packager 사용기](http://honeyperl.tistory.com/entry/Tool-Cava-Packager)
-* [PerlApp](http://www.activestate.com/perl-dev-kit)
-* [Perl에서의 컴파일과 크로스플랫폼 지원 정보](http://blog.naver.com/PostView.nhn?blogId=pulsori&logNo=140050516302)
+- [PerlApp](http://www.activestate.com/perl-dev-kit)
+- [Perl에서의 컴파일과 크로스플랫폼 지원 정보](http://blog.naver.com/PostView.nhn?blogId=pulsori&logNo=140050516302)
 
 
 정리하며

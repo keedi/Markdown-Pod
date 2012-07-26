@@ -73,42 +73,42 @@ Perl 크리스마스 달력 기사 제의를 해 주셨습니다.
 
 =over
 
-=item *
+=item -
 
 타자 연습 문장 자료를 입력받는다.
 
 
-=item *
+=item -
 
 연습 문장을 화면에 출력한다.
 
 
-=item *
+=item -
 
 사용자로부터 입력을 받는다.
 
 
-=item *
+=item -
 
 사용자가 문장을 입력하는 데 걸린 시간을 측정한다.
 
 
-=item *
+=item -
 
 몇 글자를 입력했는지를 계산한다.
 
 
-=item *
+=item -
 
 올바로 입력한 글자와 오타를 구분한다.
 
 
-=item *
+=item -
 
 오타의 위치, 연습 시간, 정확도, 속도를 출력한다.
 
 
-=item *
+=item -
 
 위 작업을 반복한다.
 
@@ -435,22 +435,22 @@ Perl을 만든 L<Larry Wall|http://en.wikipedia.org/wiki/Larry_Wall>에게 역�
 
 =over
 
-=item *
+=item -
 
 L<이야기 모드 연습 예제 파일|2011-12-23-data.txt>
 
 
-=item *
+=item -
 
 L<문장 모드 연습 예제 파일|2011-12-23-proverbs.txt>
 
 
-=item *
+=item -
 
 L<타자 연습 프로그램|2011-12-23-typing.pl>
 
 
-=item *
+=item -
 
 L<Modern Perl|http://www.onyxneon.com/books/modern_perl/index.html> (책 소개, 구입 링크 및 무료 PDF/ePub 공개)
 

@@ -81,37 +81,37 @@ Gnome 데스크탑 환경에서 GE.TT 서비스를 연동해 마우스 클릭 �
 
 =over
 
-=item *
+=item -
 
 L<CPAN의 Config::Tiny 모듈|https://metacpan.org/module/Config::Tiny>
 
 
-=item *
+=item -
 
 L<CPAN의 Const::Fast 모듈|https://metacpan.org/module/Const::Fast>
 
 
-=item *
+=item -
 
 L<CPAN의 File::HomeDir 모듈|https://metacpan.org/module/File::HomeDir>
 
 
-=item *
+=item -
 
 L<CPAN의 File::Spec 모듈|https://metacpan.org/module/File::Spec>
 
 
-=item *
+=item -
 
 L<CPAN의 IPC::Run 모듈|https://metacpan.org/module/IPC::Run>
 
 
-=item *
+=item -
 
 L<CPAN의 Net::API::Gett 모듈|https://metacpan.org/module/Net::API::Gett>
 
 
-=item *
+=item -
 
 L<CPAN의 Try::Tiny 모듈|https://metacpan.org/module/Try::Tiny>
 
@@ -277,12 +277,12 @@ C<Command> 탭 하부의 C<Command> 섹션의 값을 다음처럼 설정합니�
 
 =over
 
-=item *
+=item -
 
 I<Path>: C</home/<your_id>/bin/gett.pl>
 
 
-=item *
+=item -
 
 I<Parameters>: C<%M>
 
