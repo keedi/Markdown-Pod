@@ -1,6 +1,8 @@
 Release history for Markdown-Pod
 
 0.XXX
+    - handle Markdent 0.22's line_break event
+      - separate paragraph if line_break is occurred
     - [RT #77887] parse embed html
       - display html using POD's =begin and =end tag pair
     - [RT #77889] display list's bullet
