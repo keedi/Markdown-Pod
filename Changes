@@ -1,5 +1,9 @@
 Release history for Markdown-Pod
 
+0.XXX
+    - [RT #77889] display list's bullet
+      - Markdent 0.21 supports bullet attribute for list
+
 0.002     2012-06-18 18:06:55 Asia/Seoul
     - add real world markdown converting test
       - take markdown from http://advent.perl.kr/2011
