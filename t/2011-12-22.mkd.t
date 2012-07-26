@@ -84,22 +84,22 @@ L<Net::Twitter::Lite|https://metacpan.org/module/Net::Twitter::Lite> 모듈을 �
 
 =over
 
-=item *
+=item -
 
 Perl
 
 
-=item *
+=item -
 
 L<LWP::UserAgent|https://metacpan.org/module/LWP::UserAgent> 모듈
 
 
-=item *
+=item -
 
 L<Encode|https://metacpan.org/module/Encode> 모듈
 
 
-=item *
+=item -
 
 L<DateTime|https://metacpan.org/module/DateTime> 모듈
 
@@ -497,22 +497,22 @@ L<@gypark|http://twitter.com/gypark>님, L<@aer0|http://twitter.com/aer0>님께 
 
 =over
 
-=item *
+=item -
 
 L<정규표현식 문서|http://gypark.pe.kr/wiki/Perl/%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D> - L<@gypark|http://twitter.com/gypark>
 
 
-=item *
+=item -
 
 L<선물 세 가지 :-D - 2010년 Seoul.pm 크리스마스 달력|http://advent.perl.kr/2010/2010-12-04.html> - L<@gypark|http://twitter.com/gypark>
 
 
-=item *
+=item -
 
 L<Obtain a switch/case behaviour in Perl 5|http://stackoverflow.com/questions/844616/obtain-a-switch-case-behaviour-in-perl-5>
 
 
-=item *
+=item -
 
 L<거침없이 배우는 Perl 비평|https://github.com/aero/perl_docs/blob/master/Learning_Perl_5th_kor_review.md> - L<@aer0|http://twitter.com/aer0>
 

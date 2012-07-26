@@ -162,41 +162,41 @@ sub end_blockquote {
 }
 
 sub start_unordered_list {
-    my $self  = shift;
+    my $self = shift;
 
-    push @list_type, '*';
     $self->_stream("=over\n\n");
 }
 
 sub end_unordered_list {
-    my $self  = shift;
+    my $self = shift;
 
-    my $type = pop @list_type;
     $self->_stream("=back\n\n");
 }
 
 sub start_ordered_list {
-    my $self  = shift;
+    my $self = shift;
 
-    push @list_type, '1.';
     $self->_stream("=over\n\n");
 }
 
 sub end_ordered_list {
-    my $self  = shift;
+    my $self = shift;
 
-    my $type = pop @list_type;
     $self->_stream("=back\n\n");
 }
 
 sub start_list_item {
-    my $self  = shift;
+    my $self = shift;
+    my %p    = validated_hash(
+        \@_,
+        bullet => { isa => Str },
+    );
 
-    $self->_stream("=item $list_type[-1]\n\n");
+    $self->_stream("=item $p{bullet}\n\n");
 }
 
 sub end_list_item {
-    my $self  = shift;
+    my $self = shift;
 
     $self->_stream("\n\n");
 }
@@ -275,6 +275,30 @@ sub html_tag {
     }
 }
 
+sub html_block {
+    my $self = shift;
+    my ($html) = validated_list( \@_, html => { isa => Str }, );
+
+    chomp $html;
+    $self->_output()->print(
+            <<"END_HTML"
+
+=begin html
+
+$html
+
+=end html
+
+END_HTML
+    );
+}
+
+sub line_break {
+    my $self = shift;
+    $self->_stream( "\n\n" );
+}
+
+
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
@@ -316,11 +340,6 @@ create Markdown::Pod::Handler object
 =method markdown_to_pod
 
 convert markdown text to POD text
-
-
-=head1 CONTRIBUTORS
-
-Abigail (ABIGAIL)
 
 
 =head1 SEE ALSO

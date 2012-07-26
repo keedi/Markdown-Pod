@@ -47,42 +47,42 @@ Mojolicious는 실시간 웹 프레임워크를 표방하고 있습니다.
 
 =over
 
-=item *
+=item -
 
 실시간 웹 프레임워크로서 Mojolicious::Lite를 통해 단일 파일로 간소화한 버전도 제공
 
 
-=item *
+=item -
 
 REST 라우트, 플러그인, 펄에 적합한 탬플렛, 세션 관리, 서명된 쿠키, 테스팅 프레임워크, 정적 파일 서버, I18N, 최고의 유니코드 지원 등 강력하고 격이 다른 구성
 
 
-=item *
+=item -
 
 아주 깔끔하고 이식성 높으며, 비밀스런 작동은 않으며, 펄 5.10.1 외에 의존하는 것이 없다. 순수한 펄 객체지향 API로 제공된다.
 
 
-=item *
+=item -
 
 HTTP 1.1 스택을 완전히 지원하고, IPv6, TLS, Bonjour, IDNA, Comet(long polling), chunking과 멀티파트 지원 및 웹소켓 클라이언트/서버 구현 제공
 
 
-=item *
+=item -
 
 기본적으로 non-blocking I/O 웹 서버로서, libev와 hot deployment 지원, 임베딩에 최적
 
 
-=item *
+=item -
 
 CGI 및 PSGI 자동 인식
 
 
-=item *
+=item -
 
 JSON, HTML5/XML 파서 및 CSS3 선택자 지원
 
 
-=item *
+=item -
 
 몇 년 간의 Catalyst 개발 경험을 기반으로 깔끔하게 개발됨.
 
@@ -285,12 +285,12 @@ C<wsAction>의 행동을 위의 두 줄로 요약하면 아래와 같습니다.
 
 =over
 
-=item *
+=item -
 
 접속되거나 메시지를 받으면 모든 클라이언트에게 메시지 통지(send_message)
 
 
-=item *
+=item -
 
 접속이 끊어지면 경우 모든 클라이언트에게 메시지 통지
 

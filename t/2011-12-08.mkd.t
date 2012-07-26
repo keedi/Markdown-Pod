@@ -70,12 +70,12 @@ L<비즈폼|http://www.bizforms.co.kr>이나 L<예스폼|http://www.yesform.co.k
 
 =over
 
-=item *
+=item -
 
 L<CPAN의 OpenDocument::Template 모듈|https://metacpan.org/module/OpenDocument::Template>
 
 
-=item *
+=item -
 
 L<CPAN의 Catalyst 모듈|https://metacpan.org/module/Catalyst>
 
@@ -114,32 +114,32 @@ ODF포맷을 사용한 대표적인 응용 프로그램 및 오피스 제품은 
 
 =over
 
-=item *
+=item -
 
 L<LibreOffice|http://www.libreoffice.org>
 
 
-=item *
+=item -
 
 L<OpenOffice|http://www.openoffice.org>
 
 
-=item *
+=item -
 
 L<AbiWord|http://www.abisource.com>
 
 
-=item *
+=item -
 
 L<KOffice|http://www.koffice.org>
 
 
-=item *
+=item -
 
 L<Google Docs|https://docs.google.com/>
 
 
-=item *
+=item -
 
 L<MS Office 2010/2007 SP2|http://office.microsoft.com/ko-kr/>
 
@@ -306,22 +306,22 @@ L<CPAN의 OpenDocument::Template 모듈|https://metacpan.org/module/OpenDocument
 
 =over
 
-=item *
+=item -
 
 I<src>:          템플릿 원본 ODT 파일을 지정합니다.
 
 
-=item *
+=item -
 
 I<config>:       변경될 내용들을 담고 있는 해시 레퍼런스입니다. 템플릿으로 사용하는 파일의 이름과 사용할 변수 정보가 들어있습니다.
 
 
-=item *
+=item -
 
 I<template_dir>: C<config>에서 템플릿으로 사용할 파일을 저장하는 디렉토리입니다.
 
 
-=item *
+=item -
 
 I<dest>:         자동으로 생성되는 ODT 파일의 경로를 지정합니다.
 
@@ -363,27 +363,27 @@ L<Catalyst|http://www.catalystframework.org>는 Perl의 대표적인 웹프레�
 
 =over
 
-=item *
+=item -
 
 L<나의 Catalyst 답사기 - 2010년 Seoul.pm 크리스마스 달력|http://advent.perl.kr/2010/2010-12-12.html>
 
 
-=item *
+=item -
 
 L<Catalyst 를 이용한 웹 서비스 개발 #1|http://jeen.tistory.com/93>
 
 
-=item *
+=item -
 
 L<CPAN Catalyst::Manual 모듈|https://metacpan.org/module/Catalyst::Manual>
 
 
-=item *
+=item -
 
 L<Catalyst 공식 위키|http://wiki.catalystframework.org/wiki/>
 
 
-=item *
+=item -
 
 L<Catalyst 크리스마스 달력|http://www.catalystframework.org/calendar>
 
@@ -492,17 +492,17 @@ C<content.xml> 파일을 변경합니다.
 
 =over
 
-=item *
+=item -
 
 이력서
 
 
-=item *
+=item -
 
 문어발 전단지
 
 
-=item *
+=item -
 
 FTA 국회의원 상장 만들기
 

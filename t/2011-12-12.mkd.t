@@ -55,32 +55,32 @@ I<누구보다 빠르게 남들과는 다르게> 웹툰을 보고 싶다는
 
 =over
 
-=item *
+=item -
 
 L<CPAN의 File::Path 모듈|https://metacpan.org/module/File::Path>
 
 
-=item *
+=item -
 
 L<CPAN의 File::Slurp 모듈|https://metacpan.org/module/File::Slurp>
 
 
-=item *
+=item -
 
 L<CPAN의 LWP::UserAgent 모듈|https://metacpan.org/module/LWP::UserAgent>
 
 
-=item *
+=item -
 
 L<CPAN의 URI 모듈|https://metacpan.org/module/URI>
 
 
-=item *
+=item -
 
 L<CPAN의 Web::Scraper 모듈|https://metacpan.org/module/Web::Scraper>
 
 
-=item *
+=item -
 
 L<CPAN의 YAML::Tiny 모듈|https://metacpan.org/module/YAML::Tiny>
 
@@ -194,12 +194,12 @@ C<manaba.yml> 파일은 크게 두 개의 항목을 가집니다.
 
 =over
 
-=item *
+=item -
 
 C<site>
 
 
-=item *
+=item -
 
 C<webtoon>
 
@@ -326,12 +326,12 @@ C<update> 컨트롤러를 생성합니다.
 
 =over
 
-=item *
+=item -
 
 /
 
 
-=item *
+=item -
 
 /update/:id?
 
@@ -457,12 +457,12 @@ IP 블럭 당하지 않은 것이 다행이군요...;;;
 
 =over
 
-=item *
+=item -
 
 L<CPAN의 File::Path 모듈|https://metacpan.org/module/File::Path>
 
 
-=item *
+=item -
 
 L<CPAN의 File::Slurp 모듈|https://metacpan.org/module/File::Slurp>
 

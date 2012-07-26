@@ -84,17 +84,17 @@ L<거침없이 배우는 펄|http://www.yes24.com/24/goods/4433208>의 공동 �
 
 =over
 
-=item *
+=item -
 
 L<CPAN의 Text::ASCIITable 모듈|https://metacpan.org/module/Text::ASCIITable>
 
 
-=item *
+=item -
 
 L<CPAN의 Text::CharWidth 모듈|https://metacpan.org/module/Text::CharWidth>
 
 
-=item *
+=item -
 
 L<CPAN의 Text::WrapI18N 모듈|https://metacpan.org/module/Text::WrapI18N>
 
@@ -132,22 +132,22 @@ L<![카탈리스트 디버그 로그][img-01]|2011-12-01-1.png>
 
 =over
 
-=item *
+=item -
 
 이름
 
 
-=item *
+=item -
 
 별명
 
 
-=item *
+=item -
 
 전자우편
 
 
-=item *
+=item -
 
 홈페이지
 
@@ -382,12 +382,12 @@ Perl에 익숙하지 않다면 이번 패치는 조금 복잡하게 느껴질 �
 
 =over
 
-=item *
+=item -
 
 C<Text::WrapI18N> 모듈의 C<_isCJ> 함수
 
 
-=item *
+=item -
 
 C<Text::ASCIITable> 모듈의 C<wrap> 함수
 

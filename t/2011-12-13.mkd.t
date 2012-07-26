@@ -72,17 +72,17 @@ POD 문서가 포함되어 있습니다. 그 외에도 방대한 규모의 지�
 
 =over
 
-=item *
+=item -
 
 L<perltoc|cpan-perltoc>: 펄 내장 문서 목록
 
 
-=item *
+=item -
 
 L<Catalyst::Manual::Intro|cpan-cmi>: 카탈리스트 메뉴얼 목록
 
 
-=item *
+=item -
 
 L<Catalyst::Manual::Cookbook|cpan-cmc>: 카탈리스트 요리책
 
@@ -190,17 +190,17 @@ C<h>를 입력해 확인할 수 있습니다. 주로 쓰는건 다음 3가지 �
 
 =over
 
-=item *
+=item -
 
 i [word]: 모듈 검색
 
 
-=item *
+=item -
 
 install [module]: 모듈 설치
 
 
-=item *
+=item -
 
 upgrade: 현재 설치된 전체 모듈의 최신상태 유지
 
@@ -221,17 +221,17 @@ upgrade: 현재 설치된 전체 모듈의 최신상태 유지
 
 =over
 
-=item *
+=item -
 
 CPAN/MyConfig.pm: 내가 설정한 C<cpan>의 설정내용이 들어있습니다. 이 파일을 삭제하면 C<cpan>의 설정을 다시할수 있습니다.
 
 
-=item *
+=item -
 
 build/: cpan을 통해 설치한 모든 모듈의 build가 존재합니다.
 
 
-=item *
+=item -
 
 sources/: cpan을 통해 내려받은 모든 모듈의 압축된 원본 소스파일을 보관합니다.
 

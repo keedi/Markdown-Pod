@@ -88,7 +88,7 @@ I<그림 2.> 웹페이지에서 SSP와 한글 지역화 파일을 받는 방법
 
 =over
 
-=item *
+=item -
 
 L<narazaka.net/c/ukagaka|http://narazaka.net/c/ukagaka>
 
@@ -245,27 +245,27 @@ I<그림 4.> 우리의 고스트가 입을 열기 시작했어요.
 
 =over
 
-=item *
+=item -
 
 L<나니카 애호가 카페|http://cafe.naver.com/naniko.cafe>
 
 
-=item *
+=item -
 
 L<Moon Melody :: 우카가카(나니카)의 간략한 역사|http://moonmelody.com/tt/363>
 
 
-=item *
+=item -
 
 L<The Swimming Bird (Part.2) :: Nanika & Ukagaka (나니카 & 우카가카) 설치법 & 자료들|http://abilral.egloos.com/5383781125>
 
 
-=item *
+=item -
 
 L<Moon Melody :: SSP 시작 매뉴얼|http://moonmelody.com/tt/entry/SSP-%EC%8B%9C%EC%9E%91-%EB%A7%A4%EB%89%B4%EC%96%BC?category=35>
 
 
-=item *
+=item -
 
 L<SSP - Nanika Wiki|http://www.sanori.net/nanika/wiki/SSP92125125>
 

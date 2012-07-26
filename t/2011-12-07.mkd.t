@@ -63,17 +63,17 @@ C<Shift + PrtSc> 키를 이용하면 현재 화면을 쉽게 클립보드에 저
 
 =over
 
-=item *
+=item -
 
 어떤 행위를 했을때 화면을 갈무리 할 것인지 결정
 
 
-=item *
+=item -
 
 결정된 행위가 이루어졌을 경우 C<Shift + PrtSc> 키가 입력된 것처럼 동작
 
 
-=item *
+=item -
 
 클립보드의 내용을 읽어와서 파일로 저장
 
@@ -92,32 +92,32 @@ C<Shift + PrtSc> 키를 이용하면 현재 화면을 쉽게 클립보드에 저
 
 =over
 
-=item *
+=item -
 
 L<CPAN의 Win32::GUI 모듈|https://metacpan.org/module/Win32::GUI>
 
 
-=item *
+=item -
 
 L<CPAN의 Win32::GuiTest 모듈|https://metacpan.org/module/Win32::GuiTest>
 
 
-=item *
+=item -
 
 L<CPAN의 Win32::HideConsole 모듈|https://metacpan.org/module/Win32::HideConsole>
 
 
-=item *
+=item -
 
 L<CPAN의 Win32::Clipboard 모듈|https://metacpan.org/module/Win32::Clipboard>
 
 
-=item *
+=item -
 
 L<CPAN의 DateTime 모듈|https://metacpan.org/module/DateTime>
 
 
-=item *
+=item -
 
 L<CPAN의 File::Slurp 모듈|https://metacpan.org/module/File::Slurp>
 

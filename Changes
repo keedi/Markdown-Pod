@@ -1,5 +1,13 @@
 Release history for Markdown-Pod
 
+0.003     2012-07-26 21:04:23 Asia/Seoul
+    - handle Markdent 0.22's line_break event
+      - separate paragraph if line_break is occurred
+    - [RT #77887] parse embed html
+      - display html using POD's =begin and =end tag pair
+    - [RT #77889] display list's bullet
+      - Markdent 0.21 supports bullet attribute for list
+
 0.002     2012-06-18 18:06:55 Asia/Seoul
     - add real world markdown converting test
       - take markdown from http://advent.perl.kr/2011

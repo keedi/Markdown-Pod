@@ -55,17 +55,17 @@ L<@ja3ck|http://twitter.com/ja3ck>(a.k.a. chammse) - Python과 Ruby를 지나 Pe
 
 =over
 
-=item *
+=item -
 
 L<Win32::SerialPort|http://metacpan.org/module/Win32::SerialPort>
 
 
-=item *
+=item -
 
 Linux/Mac 환경에서는 L<Device::SerialPort|http://metacpan.org/module/Device::SerialPort>를 이용합니다.
 
 
-=item *
+=item -
 
 아두이노 (저는 L<Duemilnove|http://arduino.cc/en/Main/arduinoBoardDuemilanove>를 쓰고 있습니다.)
 
@@ -84,12 +84,12 @@ Linux/Mac 환경에서는 L<Device::SerialPort|http://metacpan.org/module/Device
 
 =over
 
-=item *
+=item -
 
 L<Arduino.cc|http://arduino.cc/en/>
 
 
-=item *
+=item -
 
 L<아두이노스토리|http://cafe.naver.com/arduinostory/> (네이버카페)
 
@@ -106,32 +106,32 @@ L<아두이노스토리|http://cafe.naver.com/arduinostory/> (네이버카페)
 
 =over
 
-=item *
+=item -
 
 Potentiometer
 
 
-=item *
+=item -
 
 220 옴짜리 저항 1개
 
 
-=item *
+=item -
 
 LED 1개 
 
 
-=item *
+=item -
 
 패치 케이블 5개
 
 
-=item *
+=item -
 
 빵판(Bread Board)
 
 
-=item *
+=item -
 
 마지막으로, 아두이노
 
@@ -231,22 +231,22 @@ Perl에서 시리얼 포트에 접근하는 것은 정말 쉽습니다.
 
 =over
 
-=item *
+=item -
 
 하얀색(white) => GND
 
 
-=item *
+=item -
 
 좌빨색(red) => 5V
 
 
-=item *
+=item -
 
 녹색(Green) => Analog 4번
 
 
-=item *
+=item -
 
 노란색(Yellow) => Analog 5번
 
@@ -260,12 +260,12 @@ L<라이브러리|http://www.arduino.cc/playground/Main/WiiChuckClass>를 이용
 
 =over
 
-=item *
+=item -
 
 C<Wire.send(0xF0)>처럼 되어 있는 부분을 C<Wire.write(byte(0xF0))>로 변경합니다.
 
 
-=item *
+=item -
 
 C<Wire.receive()>를 C<Wire.read()>로 변경합니다.
 
@@ -397,7 +397,7 @@ C<Wire.receive()>를 C<Wire.read()>로 변경합니다.
 
 =over
 
-=item *
+=item -
 
 L<동영상1. Nunchuck 마우스|http://www.youtube.com/watch?v=1_gaxw9GKRg>
 <br  />
@@ -428,7 +428,7 @@ L<Win32::GuiTest|http://metacpan.org/module/Win32::GuiTest>로 마우스를 제�
 
 =item *
 
-'Flask 짜응 하악'하던 블로그에 불쑥 나타나 Dancer라는 십계를 내린 am0c군에게 감사의 뜻을 전하며 무지한 제게 많은 가르침을 주시는 aero님께도 감사의 말씀을 전해드리고 싶습니다.  
+'Flask 짜응 하악'하던 블로그에 불쑥 나타나 Dancer라는 십계를 내린 am0c군에게 감사의 뜻을 전하며 무지한 제게 많은 가르침을 주시는 aero님께도 감사의 말씀을 전해드리고 싶습니다.
 
 
 =back
