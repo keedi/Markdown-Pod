@@ -6,13 +6,51 @@ use warnings;
 
 use Encode qw( encodings );
 use List::Util qw( first );
+use Scalar::Util qw(blessed);
 use Markdent::Parser;
-use Markdent::Types qw( Str );
 use Markdown::Pod::Handler;
-use Moose;
-use MooseX::Params::Validate qw( validated_list );
-use MooseX::StrictConstructor;
-use namespace::autoclean;
+
+sub new {
+	my ($class, %args) = @_;
+	my $self = {%args};
+	return bless $self, $class;
+}
+
+sub Str { '' }
+sub validated_list {
+	my %args = @{shift()};
+
+	my $callsub = (caller(0))[3];
+	my $except = sub { require Carp; Carp::croak @_ };
+
+	my @out;
+	while (my ($param, $rule) = splice @_, 0, 2) {
+		if (!exists $args{$param}) {
+			if (exists $rule->{default}) {
+				$args{$param} = $rule->{default};
+			} elsif ($rule->{optional}) {
+        push @out, $rule->{default} if exists $rule->{default};
+      } else {
+				$except->("missing required param to $callsub: $param");
+			}
+		}
+
+		my $value = $args{$param};
+		if (exists $rule->{isa}) {
+			if ($rule->{isa} =~ /::/) {
+				my $found = blessed($args{$param}) || ref($args{param});
+				my $wanted = +{
+					'' => 'Str',
+				}->{$rule->{isa}} || $rule->{isa};
+				$except->("param $param should be a $wanted not a $found")
+					if $found ne $wanted;
+			}
+		}
+
+		push @out, $args{$param};
+	}
+	return @out;
+}
 
 sub markdown_to_pod {
     my $self = shift;
@@ -72,7 +110,6 @@ sub markdown_to_pod {
     return $capture;
 }
 
-__PACKAGE__->meta->make_immutable;
 1;
 __END__
 
@@ -80,7 +117,7 @@ __END__
 =head1 SYNOPSIS
 
     use Markdown::Pod;
-    
+
     my $m2p = Markdown::Pod->new;
     my $pod = $m2p->markdown_to_pod(
         markdown => $markdown,
