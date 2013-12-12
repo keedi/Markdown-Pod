@@ -7,7 +7,7 @@ use Encode qw( decode_utf8 );
 use File::Slurp;
 use Markdown::Pod;
 
-my $file = 't/mkd/html-entities.mkd';
+my $file = 't/mkd/github-2-html-entities.mkd';
 
 my $m2p = Markdown::Pod->new;
 my $src = read_file(\*DATA);
