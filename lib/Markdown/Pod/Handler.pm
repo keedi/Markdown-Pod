@@ -298,6 +298,13 @@ sub line_break {
     $self->_stream( "\n\n" );
 }
 
+sub html_entity {
+    my $self = shift;
+    my ($entity) = validated_list( \@_, entity => { isa => Str } );
+
+    $self->_stream( "E<$entity>" );
+}
+
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
