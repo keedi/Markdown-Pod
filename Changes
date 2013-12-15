@@ -1,5 +1,6 @@
 Release history for Markdown-Pod
 
+0.005     2013-12-15 17:50:43 Asia/Seoul
     - remove File::Slurp module dependency
     - [GitHub #3] insisting on Markdent v0.23 or later,
       in order to properly support lazy list numbering. (JMAC)
