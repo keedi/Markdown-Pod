@@ -1,25 +1,11 @@
+use lib 't/lib';
 use strict;
 use warnings;
-
 use Test::More tests => 1;
-
-use Encode qw( decode_utf8 );
-use File::Slurp;
-use Markdown::Pod;
+use Markdown::Pod::Test qw( get_pod markdown_to_pod );
 
 my $file = 't/mkd/rt-77889-ordered-list.mkd';
-
-my $m2p = Markdown::Pod->new;
-my $src = read_file(\*DATA);
-my $dst = $m2p->markdown_to_pod(
-    encoding => 'utf8',
-    markdown => decode_utf8(read_file($file)),
-);
-
-$src =~ s/\s+\Z//gsm;
-$dst =~ s/\s+\Z//gsm;
-
-is $dst, $src, "converting $file";
+is markdown_to_pod($file), get_pod(\*DATA), "converting $file";
 
 __DATA__
 =encoding utf8

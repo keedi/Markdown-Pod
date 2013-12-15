@@ -4,7 +4,7 @@ Markdown::Pod - Convert Markdown to POD
 
 # VERSION
 
-version 0.004
+version 0.005
 
 # SYNOPSIS
 
