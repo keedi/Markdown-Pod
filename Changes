@@ -1,5 +1,9 @@
 Release history for Markdown-Pod
 
+    - remove File::Slurp module dependency
+    - [GitHub #3] insisting on Markdent v0.23 or later,
+      in order to properly support lazy list numbering. (JMAC)
+
 0.004     2013-12-12 16:35:19 Asia/Seoul
     - [GitHub #2] add handler support for HTML entities (JMAC)
 
