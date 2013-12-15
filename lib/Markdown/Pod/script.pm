@@ -5,7 +5,6 @@ use strict;
 use warnings;
 
 use Encode qw( encodings decode );
-use File::Slurp;
 use Getopt::Long;
 use List::Util qw( first );
 use Markdown::Pod;
@@ -42,7 +41,7 @@ sub doit {
     my $m2p  = Markdown::Pod->new;
 
     if ( $self->{load_from_stdin} ) {
-        my $markdown = read_file(\*STDIN);
+        my $markdown = do { local $/; <STDIN>; };
 
         my $pod = $m2p->markdown_to_pod(
             encoding => $self->{encoding},
@@ -52,9 +51,14 @@ sub doit {
     }
 
     for my $file ( @{$self->{argv}} ) {
+        open my $fh, $file
+            or warn("cannot open $file: $!\n"), next;
+        my $markdown = do { local $/; <$fh>; };
+        close $fh;
+
         my $pod = $m2p->markdown_to_pod(
             encoding => $self->{encoding},
-            markdown => scalar( read_file($file) ),
+            markdown => $markdown,
         );
         print $self->{encoding} ? decode( $self->{encoding}, $pod ) : $pod;
     }
