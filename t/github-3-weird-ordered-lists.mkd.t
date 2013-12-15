@@ -4,7 +4,7 @@ use warnings;
 use Test::More tests => 1;
 use Markdown::Pod::Test qw( get_pod markdown_to_pod );
 
-my $file = 't/mkd/weird-ordered-lists.mkd';
+my $file = 't/mkd/github-3-weird-ordered-lists.mkd';
 is markdown_to_pod($file), get_pod(\*DATA), "converting $file";
 
 __DATA__
