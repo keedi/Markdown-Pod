@@ -14,6 +14,7 @@ sub new {
 
     bless {
         encoding => 'utf8',
+        dialect  => 'Standard',
         verbose  => undef,
         argv     => [],
         @_,
@@ -45,6 +46,7 @@ sub doit {
 
         my $pod = $m2p->markdown_to_pod(
             encoding => $self->{encoding},
+            dialect => $self->{dialect},
             markdown => $markdown,
         );
         print $self->{encoding} ? decode( $self->{encoding}, $pod ) : $pod;
@@ -58,6 +60,7 @@ sub doit {
 
         my $pod = $m2p->markdown_to_pod(
             encoding => $self->{encoding},
+            dialect => $self->{dialect},
             markdown => $markdown,
         );
         print $self->{encoding} ? decode( $self->{encoding}, $pod ) : $pod;
@@ -68,7 +71,6 @@ sub doit {
 
 sub env {
     my ($self, $key) = @_;
-
     return $ENV{"PERL_MARKDOWN2POD_" . $key} || q{};
 }
 
@@ -82,6 +84,7 @@ sub parse_options {
     Getopt::Long::Configure("bundling");
     Getopt::Long::GetOptions(
         'e|encoding=s' => sub { $self->{encoding} = $_[1] },
+        'd|dialect=s'  => sub { $self->{dialect} = $_[1] },
         'v|verbose'    => sub { $self->{verbose} = 1 },
         'h|help'       => sub { $self->{action}  = 'show_help' },
         'V|version'    => sub { $self->{action}  = 'show_version' },
@@ -110,6 +113,7 @@ Usage: markdown2pod [OPTIONS] <file1> [ <file2> ... ]
 
 OPTIONS:
     -e,--encoding       set markdown encoding
+    -d,--dialect        set markdown dialect (Standard, Github, Theory)
     -v,--verbose        print more information
     -h,--help           print this message
     -V,--version        display software version
