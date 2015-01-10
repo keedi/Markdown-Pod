@@ -53,6 +53,11 @@ convert markdown text to POD text
 
 Keedi Kim - 김도형 <keedi@cpan.org>
 
+# CONTRIBUTORS
+
+- Abigail (ABIGAIL)
+- Jason McIntosh (JMAC)
+
 # COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2013 by Keedi Kim.
