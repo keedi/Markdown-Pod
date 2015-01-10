@@ -239,6 +239,13 @@ sub end_code {
     $code_buf=undef;
 }
 
+sub code_block {
+    my $self=shift();
+    my ($code) = validated_list( \@_, code => { isa => Str }, language => { isa => Str, optional => 1 } );
+    $code=~s/^(.*)$/ $1/mg;
+    $self->_stream("\n$code\n");
+}
+
 sub image {
     my $self = shift;
     my %p    = validated_hash(
