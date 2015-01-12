@@ -28,7 +28,15 @@ has _output => (
     init_arg => 'output',
 );
 
+
+#  Default width for horizontal rule
+#
+our $HORIZONTAL_RULE_WIDTH=80;
+
 my $link_buf;
+my $code_buf;
+my $tble_buf;
+my @tble=([]);
 my @blockquotes;
 my @list_type;
 
@@ -51,6 +59,12 @@ sub text {
 
     if ( $link_buf ) {
         $link_buf->{text} = $text;
+    }
+    elsif ( $code_buf ) {
+        $code_buf->{text} = $text;
+    }
+    elsif ( $tble_buf ) {
+        $tble_buf->{text} = $text;
     }
     else {
         $self->_stream( $text );
@@ -152,13 +166,13 @@ sub preformatted {
 sub start_blockquote {
     my $self  = shift;
 
-    $self->_stream("=begin blockquote\n\n");
+    $self->_stream("=over 2\n\n");
 }
 
 sub end_blockquote {
     my $self  = shift;
 
-    $self->_stream("=end blockquote\n\n");
+    $self->_stream("=back\n\n");
 }
 
 sub start_unordered_list {
@@ -203,14 +217,33 @@ sub end_list_item {
 
 sub start_code {
     my $self = shift;
-
-    $self->_stream('C<');
+    #  Start buffering this snippet
+    $code_buf={};
 }
+
 
 sub end_code {
     my $self = shift;
+    my $text=$code_buf->{'text'};
+    if ($text=~/\n/m) {
+        #  Multi-line. Probably code block
+        #
+        $text=~s/^(.*)$/ $1/mg;
+        $self->_stream($text);
+    }
+    else {
+        #  Single line
+        #
+        $self->_stream("C<<< $text >>>");
+    }
+    $code_buf=undef;
+}
 
-    $self->_stream('>');
+sub code_block {
+    my $self=shift();
+    my ($code) = validated_list( \@_, code => { isa => Str }, language => { isa => Str, optional => 1 } );
+    $code=~s/^(.*)$/ $1/mg;
+    $self->_stream("\n$code\n");
 }
 
 sub image {
@@ -305,6 +338,80 @@ sub html_entity {
     $self->_stream( "E<$entity>" );
 }
 
+
+# Added A.Speer
+sub horizontal_rule {
+    my $self=shift();
+    $self->_stream( ('=' x $HORIZONTAL_RULE_WIDTH)."\n" );
+}
+
+sub auto_link {
+    my $self=shift();
+    my ($uri) = validated_list( \@_, uri => { isa => Str } );
+    $self->_stream( "L<$uri>" );
+}    
+
+
+sub html_comment_block {
+    my $self=shift();
+    # Stub
+}    
+
+
+sub start_table {
+    my $self=shift();
+    # Stub 
+}
+
+sub start_table_body {
+    my $self=shift();
+    # Stub 
+}
+
+sub start_table_row {
+    my $self=shift();
+    # Stub 
+}
+
+sub start_table_cell {
+    my $self=shift();
+    $tble_buf={};
+}
+
+sub end_table {
+    my $self=shift();
+    eval {
+        require Text::Table::Tiny;
+        1;
+    } || die ('unable to load Text::Table::Tiny - please make sure it is installed !');
+    my $table=Text::Table::Tiny::table(rows=>\@tble, separate_rows => 0, header_row => 0);
+    #  Indent so table appears as POD code. Open to other suggestions
+    $table=~s/^(.*)/  $1/mg;
+    $table.="\n";
+    #  Safety in case parser skips end-cell - which it seems to do sometimes
+    $tble_buf=undef;
+    $self->_stream($table);
+}
+
+sub end_table_body {
+    my $self=shift();
+    #  Safety
+    $tble_buf=undef;
+}
+
+sub end_table_row {
+    my $self=shift();
+    push @tble,[];
+    #  Safety
+    $tble_buf=undef;
+}
+
+sub end_table_cell {
+    my $self=shift();
+    push @{$tble[$#tble]}, $tble_buf->{'text'};
+    #  Stop buffering table text
+    $tble_buf=undef;
+}
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
