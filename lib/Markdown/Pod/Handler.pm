@@ -40,6 +40,16 @@ my @tble=([]);
 my @blockquotes;
 my @list_type;
 
+use constant {
+    STACK_LINK => 1,
+    STACK_CODE => 2,
+    STACK_TBLE => 3,
+    STACK_STRONG => 4,
+    STACK_EMPHASIS => 5,
+};
+
+my @style_stack;
+
 sub _stream {
     my ( $self, @params ) = @_;
     print { $self->_output } @params;
@@ -57,14 +67,26 @@ sub text {
     my $self = shift;
     my ($text) = validated_list( \@_, text => { isa => Str } );
 
-    if ( $link_buf ) {
-        $link_buf->{text} = $text;
-    }
-    elsif ( $code_buf ) {
-        $code_buf->{text} = $text;
-    }
-    elsif ( $tble_buf ) {
-        $tble_buf->{text} = $text;
+    if( @style_stack ) {
+        # This allows the end_link() handler to know that *some* text was inside
+        # it. So if one has [`text`](http://example.org/), the end_code()
+        # handler will output the code to the stream before the end_link()
+        # finishes.
+        $link_buf->{text} = '' if grep { $_ == STACK_LINK } @style_stack;
+
+        if ( $style_stack[-1] == STACK_LINK ) {
+            $link_buf->{text} = $text;
+        }
+        elsif ( $style_stack[-1] == STACK_CODE ) {
+            $code_buf->{text} = $text;
+        }
+        elsif ( $style_stack[-1] == STACK_TBLE ) {
+            $tble_buf->{text} = $text;
+        }
+        else {
+            # another kind of style that does not require storing state
+            $self->_stream( $text );
+        }
     }
     else {
         $self->_stream( $text );
@@ -113,6 +135,7 @@ sub start_link {
 
     delete @p{ grep { ! defined $p{$_} } keys %p };
 
+    push @style_stack, STACK_LINK;
     $link_buf->{uri} = $p{uri};
     $self->_stream('L<');
 }
@@ -120,37 +143,42 @@ sub start_link {
 sub end_link {
     my $self = shift;
 
-    if ($link_buf && $link_buf->{text}) {
+    if ($link_buf && exists $link_buf->{text}) {
         $self->_stream( "$link_buf->{text}|$link_buf->{uri}>" );
     }
     else {
         $self->_stream( "$link_buf->{uri}>" );
     }
 
+    pop @style_stack;
     $link_buf = undef;
 }
 
 sub start_strong {
     my $self = shift;
 
+    push @style_stack, STACK_STRONG;
     $self->_stream('B<');
 }
 
 sub end_strong {
     my $self = shift;
 
+    pop @style_stack;
     $self->_stream('>');
 }
 
 sub start_emphasis {
     my $self = shift;
 
+    push @style_stack, STACK_EMPHASIS;
     $self->_stream('I<');
 }
 
 sub end_emphasis {
     my $self = shift;
 
+    pop @style_stack;
     $self->_stream('>');
 }
 
@@ -218,6 +246,7 @@ sub end_list_item {
 sub start_code {
     my $self = shift;
     #  Start buffering this snippet
+    push @style_stack, STACK_CODE;
     $code_buf={};
 }
 
@@ -236,6 +265,7 @@ sub end_code {
         #
         $self->_stream("C<<< $text >>>");
     }
+    pop @style_stack;
     $code_buf=undef;
 }
 
@@ -375,6 +405,7 @@ sub start_table_row {
 
 sub start_table_cell {
     my $self=shift();
+    push @style_stack, STACK_TBLE;
     $tble_buf={};
 }
 
@@ -389,6 +420,7 @@ sub end_table {
     $table=~s/^(.*)/  $1/mg;
     $table.="\n";
     #  Safety in case parser skips end-cell - which it seems to do sometimes
+    pop @style_stack;
     $tble_buf=undef;
     $self->_stream($table);
 }
@@ -396,6 +428,7 @@ sub end_table {
 sub end_table_body {
     my $self=shift();
     #  Safety
+    pop @style_stack;
     $tble_buf=undef;
 }
 
@@ -403,6 +436,7 @@ sub end_table_row {
     my $self=shift();
     push @tble,[];
     #  Safety
+    pop @style_stack;
     $tble_buf=undef;
 }
 
@@ -410,6 +444,7 @@ sub end_table_cell {
     my $self=shift();
     push @{$tble[$#tble]}, $tble_buf->{'text'};
     #  Stop buffering table text
+    pop @style_stack;
     $tble_buf=undef;
 }
 
