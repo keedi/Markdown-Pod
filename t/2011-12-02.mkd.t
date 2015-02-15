@@ -145,7 +145,7 @@ C<init.sh> 파일의 내용은 다음과 같습니다.
     mkdir -p _scratch
 
 C<_deploy> 디렉토리와 C<_scratch> 디렉토리를 만들어주는 간단한 스크립트입니다.
-C<<username>>은 당연히 바꾸어 주어야 겠지요?
+C<<< <username> >>>은 당연히 바꾸어 주어야 겠지요?
 
 C<build.sh> 파일은 작성한 마크다운 문서를 이용해 HTML 파일을 만들고
 다시 GitHub로 밀어넣는 Perl 원라이너의 집합입니다. 
@@ -284,7 +284,7 @@ C<source> 가지를 C<push>하는 것 있지 마세요!
     git commit -a -m <log>
     git push origin source
 
-이제 C<https://<username>.github.com/blog> 주소의 여러분 만의 블로그가 생성되었습니다.
+이제 C<<< https://<username>.github.com/blog >>> 주소의 여러분 만의 블로그가 생성되었습니다.
 
 I<참 쉽죠잉~> ;-)
 

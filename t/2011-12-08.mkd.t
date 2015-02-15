@@ -523,7 +523,7 @@ C<xxxx>를 넣고 C<xxxx>를 찾아 변수를 바꾸는 작업을 해보면 꽤 
 ODT 파일에 C<뷁뷁샭략> 같은 문자가 들어가기도 합니다.
 이것은 인코딩 문제로 Catalyst의 설정 파일에서 UTF-8을 설정하면 해결됩니다.
 
-C<TT.pm> 모듈에는 C<ENCODING => 'utf8'>을 추가합니다.
+C<TT.pm> 모듈에는 C<<< ENCODING => 'utf8' >>>을 추가합니다.
 
     #!perl
     __PACKAGE__->config(
