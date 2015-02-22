@@ -4,6 +4,8 @@ package Markdown::Pod::script;
 use strict;
 use warnings;
 
+our $VERSION = '0.006';
+
 use Encode qw( encodings decode );
 use Getopt::Long;
 use List::Util qw( first );
@@ -24,35 +26,35 @@ sub new {
 sub doit {
     my $self = shift;
 
-    if (my $action = $self->{action}) {
+    if ( my $action = $self->{action} ) {
         $self->$action() and return 1;
     }
 
     $self->show_help(1)
-        unless @{$self->{argv}} || $self->{load_from_stdin};
+        unless @{ $self->{argv} } || $self->{load_from_stdin};
 
-    if ($self->{encoding}) {
+    if ( $self->{encoding} ) {
         my $found = first { $_ eq $self->{encoding} } Encode->encodings;
-        if (!$found) {
+        if ( !$found ) {
             warn "cannot find such '$self->{encoding}' encoding\n";
             $self->show_help(1);
         }
     }
 
-    my $m2p  = Markdown::Pod->new;
+    my $m2p = Markdown::Pod->new;
 
     if ( $self->{load_from_stdin} ) {
         my $markdown = do { local $/; <STDIN>; };
 
         my $pod = $m2p->markdown_to_pod(
             encoding => $self->{encoding},
-            dialect => $self->{dialect},
+            dialect  => $self->{dialect},
             markdown => $markdown,
         );
         print $self->{encoding} ? decode( $self->{encoding}, $pod ) : $pod;
     }
 
-    for my $file ( @{$self->{argv}} ) {
+    for my $file ( @{ $self->{argv} } ) {
         open my $fh, $file
             or warn("cannot open $file: $!\n"), next;
         my $markdown = do { local $/; <$fh>; };
@@ -60,7 +62,7 @@ sub doit {
 
         my $pod = $m2p->markdown_to_pod(
             encoding => $self->{encoding},
-            dialect => $self->{dialect},
+            dialect  => $self->{dialect},
             markdown => $markdown,
         );
         print $self->{encoding} ? decode( $self->{encoding}, $pod ) : $pod;
@@ -70,27 +72,27 @@ sub doit {
 }
 
 sub env {
-    my ($self, $key) = @_;
-    return $ENV{"PERL_MARKDOWN2POD_" . $key} || q{};
+    my ( $self, $key ) = @_;
+    return $ENV{ "PERL_MARKDOWN2POD_" . $key } || q{};
 }
 
 sub parse_options {
     my $self = shift;
 
-    local @ARGV = @{$self->{argv}};
+    local @ARGV = @{ $self->{argv} };
     push @ARGV, split /\s+/, $self->env('OPT');
     push @ARGV, @_;
 
     Getopt::Long::Configure("bundling");
     Getopt::Long::GetOptions(
         'e|encoding=s' => sub { $self->{encoding} = $_[1] },
-        'd|dialect=s'  => sub { $self->{dialect} = $_[1] },
-        'v|verbose'    => sub { $self->{verbose} = 1 },
-        'h|help'       => sub { $self->{action}  = 'show_help' },
-        'V|version'    => sub { $self->{action}  = 'show_version' },
+        'd|dialect=s'  => sub { $self->{dialect}  = $_[1] },
+        'v|verbose'    => sub { $self->{verbose}  = 1 },
+        'h|help'       => sub { $self->{action}   = 'show_help' },
+        'V|version'    => sub { $self->{action}   = 'show_version' },
     );
 
-    if (@ARGV == 0 || !-t STDIN) {
+    if ( @ARGV == 0 || !-t STDIN ) {
         $self->{load_from_stdin} = 1;
     }
 
@@ -100,7 +102,7 @@ sub parse_options {
 sub show_help {
     my $self = shift;
 
-    if ($_[0]) {
+    if ( $_[0] ) {
         die <<'USAGE';
 Usage: markdown2pod [OPTIONS] <file1> [ <file2> ... ]
 
@@ -142,5 +144,17 @@ __END__
 
 This module contains script related functions.
 
+
+=method new
+
+=method doit
+
+=method env
+
+=method parse_options
+
+=method show_help
+
+=method show_version
 
 =cut

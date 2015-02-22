@@ -4,6 +4,8 @@ package Markdown::Pod::Handler;
 use strict;
 use warnings;
 
+our $VERSION = '0.006';
+
 use Markdent::Types qw(
     Bool Str HashRef OutputStream HeaderLevel
 );
@@ -17,9 +19,9 @@ use List::Util;
 with 'Markdent::Role::EventsAsMethods';
 
 has encoding => (
-    is       => 'ro',
-    isa      => Str,
-    default  => q{},
+    is      => 'ro',
+    isa     => Str,
+    default => q{},
 );
 
 has _output => (
@@ -29,23 +31,22 @@ has _output => (
     init_arg => 'output',
 );
 
-
 #  Default width for horizontal rule
 #
-our $HORIZONTAL_RULE_WIDTH=80;
+our $HORIZONTAL_RULE_WIDTH = 80;
 
 my $link_buf;
 my $code_buf;
 my $tble_buf;
-my @tble=([]);
+my @tble = ( [] );
 my @blockquotes;
 my @list_type;
 
 use constant {
-    STACK_LINK => 1,
-    STACK_CODE => 2,
-    STACK_TBLE => 3,
-    STACK_STRONG => 4,
+    STACK_LINK     => 1,
+    STACK_CODE     => 2,
+    STACK_TBLE     => 3,
+    STACK_STRONG   => 4,
     STACK_EMPHASIS => 5,
 };
 
@@ -62,13 +63,13 @@ sub start_document {
     $self->_stream( '=encoding ' . $self->encoding . "\n\n" ) if $self->encoding;
 }
 
-sub end_document   { }
+sub end_document { }
 
 sub text {
     my $self = shift;
     my ($text) = validated_list( \@_, text => { isa => Str } );
 
-    if( @style_stack ) {
+    if (@style_stack) {
         # This allows the end_link() handler to know that *some* text was inside
         # it. So if one has [`text`](http://example.org/), the end_code()
         # handler will output the code to the stream before the end_link()
@@ -86,40 +87,34 @@ sub text {
         }
         else {
             # another kind of style that does not require storing state
-            $self->_stream( $text );
+            $self->_stream($text);
         }
     }
     else {
-        $self->_stream( $text );
+        $self->_stream($text);
     }
 }
 
 sub start_header {
-    my $self  = shift;
-    my ($level) = validated_list(
-        \@_,
-        level => { isa => HeaderLevel },
-    );
+    my $self = shift;
+    my ($level) = validated_list( \@_, level => { isa => HeaderLevel }, );
 
     $self->_stream("\n=head$level ");
 }
 
 sub end_header {
-    my $self  = shift;
-    my ($level) = validated_list(
-        \@_,
-        level => { isa => HeaderLevel },
-    );
+    my $self = shift;
+    my ($level) = validated_list( \@_, level => { isa => HeaderLevel }, );
 
-    $self->_stream( "\n" );
+    $self->_stream("\n");
 }
 
 sub start_paragraph {
-    my $self  = shift;
+    my $self = shift;
 }
 
 sub end_paragraph {
-    my $self  = shift;
+    my $self = shift;
 
     $self->_stream("\n");
 }
@@ -134,7 +129,7 @@ sub start_link {
         is_implicit_id => { isa => Bool, optional => 1 },
     );
 
-    delete @p{ grep { ! defined $p{$_} } keys %p };
+    delete @p{ grep { !defined $p{$_} } keys %p };
 
     push @style_stack, STACK_LINK;
     $link_buf->{uri} = $p{uri};
@@ -144,11 +139,11 @@ sub start_link {
 sub end_link {
     my $self = shift;
 
-    if ($link_buf && exists $link_buf->{text}) {
-        $self->_stream( "$link_buf->{text}|$link_buf->{uri}>" );
+    if ( $link_buf && exists $link_buf->{text} ) {
+        $self->_stream("$link_buf->{text}|$link_buf->{uri}>");
     }
     else {
-        $self->_stream( "$link_buf->{uri}>" );
+        $self->_stream("$link_buf->{uri}>");
     }
 
     pop @style_stack;
@@ -193,13 +188,13 @@ sub preformatted {
 }
 
 sub start_blockquote {
-    my $self  = shift;
+    my $self = shift;
 
     $self->_stream("=over 2\n\n");
 }
 
 sub end_blockquote {
-    my $self  = shift;
+    my $self = shift;
 
     $self->_stream("=back\n\n");
 }
@@ -230,10 +225,7 @@ sub end_ordered_list {
 
 sub start_list_item {
     my $self = shift;
-    my %p    = validated_hash(
-        \@_,
-        bullet => { isa => Str },
-    );
+    my %p = validated_hash( \@_, bullet => { isa => Str }, );
 
     $self->_stream("=item $p{bullet}\n\n");
 }
@@ -248,43 +240,47 @@ sub start_code {
     my $self = shift;
     #  Start buffering this snippet
     push @style_stack, STACK_CODE;
-    $code_buf={};
+    $code_buf = {};
 }
-
 
 sub end_code {
     my $self = shift;
-    my $text=$code_buf->{'text'};
-    if ($text=~/\n/m) {
+    my $text = $code_buf->{'text'};
+    if ( $text =~ /\n/m ) {
         #  Multi-line. Probably code block
         #
-        $text=~s/^(.*)$/ $1/mg;
+        $text =~ s/^(.*)$/ $1/mg;
         $self->_stream($text);
     }
     else {
         #  Single line
         #
-	if( $text =~ /[<>]/ ) {
-		# this is so that extra angle brackets are not used unless necessary
-		my @all_angle = $text =~ /(<+|>+)/g;
-		my @all_angle_len = map { length $_ } @all_angle;
-		my $longest = List::Util::max @all_angle_len;
+        if ( $text =~ /[<>]/ ) {
+            # this is so that extra angle brackets are not used unless necessary
+            my @all_angle     = $text =~ /(<+|>+)/g;
+            my @all_angle_len = map { length $_ } @all_angle;
+            my $longest       = List::Util::max @all_angle_len;
 
-		my $start_angle = "<" x ($longest+2);
-		my $end_angle =  ">" x ($longest+2);
-		$self->_stream("C$start_angle $text $end_angle");
-	} else {
-		$self->_stream("C<$text>");
-	}
+            my $start_angle = "<" x ( $longest + 2 );
+            my $end_angle   = ">" x ( $longest + 2 );
+            $self->_stream("C$start_angle $text $end_angle");
+        }
+        else {
+            $self->_stream("C<$text>");
+        }
     }
     pop @style_stack;
-    $code_buf=undef;
+    $code_buf = undef;
 }
 
 sub code_block {
-    my $self=shift();
-    my ($code) = validated_list( \@_, code => { isa => Str }, language => { isa => Str, optional => 1 } );
-    $code=~s/^(.*)$/ $1/mg;
+    my $self = shift;
+    my ($code) = validated_list(
+        \@_,
+        code     => { isa => Str },
+        language => { isa => Str, optional => 1 }
+    );
+    $code =~ s/^(.*)$/ $1/mg;
     $self->_stream("\n$code\n");
 }
 
@@ -299,20 +295,20 @@ sub image {
         is_implicit_id => { isa => Bool, optional => 1 },
     );
 
-    delete @p{ grep { ! defined $p{$_} } keys %p };
+    delete @p{ grep { !defined $p{$_} } keys %p };
 
     my $alt_text = exists $p{alt_text} ? qq|alt="$p{alt_text}"| : q{};
 
     my $attr = exists $p{title} ? $p{title} : q{};
     my $attr_text = q{};
-    while ($attr =~ s/(\S+)="(.*?)"//) {
+    while ( $attr =~ s/(\S+)="(.*?)"// ) {
         $attr_text .= qq{ $1="$2"};
     }
-    while ($attr =~ /(\S+)=(\S+)/g) {
+    while ( $attr =~ /(\S+)=(\S+)/g ) {
         $attr_text .= qq{ $1="$2"};
     }
 
-    $self->_stream( qq|=for html <img src="$p{uri}" $alt_text$attr_text />| );
+    $self->_stream(qq|=for html <img src="$p{uri}" $alt_text$attr_text />|);
 }
 
 sub start_html_tag {
@@ -326,10 +322,7 @@ sub start_html_tag {
 
 sub end_html_tag {
     my $self = shift;
-    my ( $tag, $attributes ) = validated_list(
-        \@_,
-        tag        => { isa => Str },
-    );
+    my ( $tag, $attributes ) = validated_list( \@_, tag => { isa => Str }, );
 }
 
 sub html_tag {
@@ -341,12 +334,13 @@ sub html_tag {
     );
 
     my $attributes_str = q{};
-    $attributes_str = join q{ }, map { qq|$_="$attributes->{$_}"| } sort keys %$attributes;
+    $attributes_str = join q{ },
+        map { qq|$_="$attributes->{$_}"| } sort keys %$attributes;
     if ( $tag =~ /^br$/i ) {
-        $self->_stream( qq|<$tag $attributes_str />\n| );
+        $self->_stream(qq|<$tag $attributes_str />\n|);
     }
     else {
-        $self->_stream( qq|<$tag $attributes_str />| );
+        $self->_stream(qq|<$tag $attributes_str />|);
     }
 }
 
@@ -356,7 +350,7 @@ sub html_block {
 
     chomp $html;
     $self->_output()->print(
-            <<"END_HTML"
+        <<"END_HTML"
 
 =begin html
 
@@ -370,100 +364,149 @@ END_HTML
 
 sub line_break {
     my $self = shift;
-    $self->_stream( "\n\n" );
+    $self->_stream("\n\n");
 }
 
 sub html_entity {
     my $self = shift;
     my ($entity) = validated_list( \@_, entity => { isa => Str } );
 
-    $self->_stream( "E<$entity>" );
+    $self->_stream("E<$entity>");
 }
-
 
 # Added A.Speer
 sub horizontal_rule {
-    my $self=shift();
-    $self->_stream( ('=' x $HORIZONTAL_RULE_WIDTH)."\n" );
+    my $self = shift;
+    $self->_stream( ( '=' x $HORIZONTAL_RULE_WIDTH ) . "\n" );
 }
 
 sub auto_link {
-    my $self=shift();
+    my $self = shift;
     my ($uri) = validated_list( \@_, uri => { isa => Str } );
-    $self->_stream( "L<$uri>" );
-}    
-
+    $self->_stream("L<$uri>");
+}
 
 sub html_comment_block {
-    my $self=shift();
+    my $self = shift;
     # Stub
-}    
-
+}
 
 sub start_table {
-    my $self=shift();
-    # Stub 
+    my $self = shift;
+    # Stub
 }
 
 sub start_table_body {
-    my $self=shift();
-    # Stub 
+    my $self = shift;
+    # Stub
 }
 
 sub start_table_row {
-    my $self=shift();
-    # Stub 
+    my $self = shift;
+    # Stub
 }
 
 sub start_table_cell {
-    my $self=shift();
+    my $self = shift;
     push @style_stack, STACK_TBLE;
-    $tble_buf={};
+    $tble_buf = {};
 }
 
 sub end_table {
-    my $self=shift();
+    my $self = shift;
     eval {
         require Text::Table::Tiny;
         1;
-    } || die ('unable to load Text::Table::Tiny - please make sure it is installed !');
-    my $table=Text::Table::Tiny::table(rows=>\@tble, separate_rows => 0, header_row => 0);
+    }
+        || die('unable to load Text::Table::Tiny - please make sure it is installed !');
+    my $table =
+        Text::Table::Tiny::table( rows => \@tble, separate_rows => 0, header_row => 0 );
     #  Indent so table appears as POD code. Open to other suggestions
-    $table=~s/^(.*)/  $1/mg;
-    $table.="\n";
+    $table =~ s/^(.*)/  $1/mg;
+    $table .= "\n";
     #  Safety in case parser skips end-cell - which it seems to do sometimes
     pop @style_stack;
-    $tble_buf=undef;
+    $tble_buf = undef;
     $self->_stream($table);
 }
 
 sub end_table_body {
-    my $self=shift();
+    my $self = shift;
     #  Safety
     pop @style_stack;
-    $tble_buf=undef;
+    $tble_buf = undef;
 }
 
 sub end_table_row {
-    my $self=shift();
-    push @tble,[];
+    my $self = shift;
+    push @tble, [];
     #  Safety
     pop @style_stack;
-    $tble_buf=undef;
+    $tble_buf = undef;
 }
 
 sub end_table_cell {
-    my $self=shift();
-    push @{$tble[$#tble]}, $tble_buf->{'text'};
+    my $self = shift;
+    push @{ $tble[$#tble] }, $tble_buf->{'text'};
     #  Stop buffering table text
     pop @style_stack;
-    $tble_buf=undef;
+    $tble_buf = undef;
 }
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
 __END__
+
+=for Pod::Coverage
+    STACK_CODE
+    STACK_EMPHASIS
+    STACK_LINK
+    STACK_STRONG
+    STACK_TBLE
+    auto_link
+    code_block
+    end_blockquote
+    end_code
+    end_document
+    end_emphasis
+    end_header
+    end_html_tag
+    end_link
+    end_list_item
+    end_ordered_list
+    end_paragraph
+    end_strong
+    end_table
+    end_table_body
+    end_table_cell
+    end_table_row
+    end_unordered_list
+    horizontal_rule
+    html_block
+    html_comment_block
+    html_entity
+    html_tag
+    image
+    line_break
+    preformatted
+    start_blockquote
+    start_code
+    start_document
+    start_emphasis
+    start_header
+    start_html_tag
+    start_link
+    start_list_item
+    start_ordered_list
+    start_paragraph
+    start_strong
+    start_table
+    start_table_body
+    start_table_cell
+    start_table_row
+    start_unordered_list
+    text
 
 =head1 SYNOPSIS
 

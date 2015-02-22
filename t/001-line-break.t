@@ -5,7 +5,7 @@ use Test::More tests => 1;
 use Markdown::Pod::Test qw( get_pod markdown_to_pod );
 
 my $file = 't/mkd/001-line-break.mkd';
-is markdown_to_pod($file), get_pod(\*DATA), "converting $file";
+is markdown_to_pod($file), get_pod( \*DATA ), "converting $file";
 
 __DATA__
 =encoding utf8
