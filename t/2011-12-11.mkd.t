@@ -265,7 +265,7 @@ C<Command> 탭 하부의 C<Command> 섹션의 값을 다음처럼 설정합니�
 
 =item -
 
-I<Path>: C</home/<your_id>/bin/gett.pl>
+I<Path>: C<<< /home/<your_id>/bin/gett.pl >>>
 
 
 =item -
@@ -314,7 +314,7 @@ I<그림 7.> gconf-editor L<(원본)|2011-12-11-07.png>
 =head2 gett.pl
 
 노틸러스 동작을 추가할 때 팝업 메뉴를 띄운 후 실제로 실행시킬
-명령을 C</home/<your_id>/bin/gett.pl>이라고 입력했습니다.
+명령을 C<<< /home/<your_id>/bin/gett.pl >>>이라고 입력했습니다.
 이제는 GE.TT로 전송하기 기능의 핵심인 C<gett.pl> 스크립트를 작성해보죠.
 우선 C<gett.pl> 명령은 노틸러스로 부터 1개 이상의 파일을 인자로 받습니다.
 C<@ARGV> 변수를 이용해서 각각의 인자를 처리하는 코드는 다음과 같습니다.

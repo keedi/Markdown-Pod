@@ -12,6 +12,7 @@ use namespace::autoclean;
 use Moose;
 use MooseX::SemiAffordanceAccessor;
 use MooseX::Params::Validate qw( validated_list validated_hash );
+use List::Util;
 
 with 'Markdent::Role::EventsAsMethods';
 
@@ -234,7 +235,18 @@ sub end_code {
     else {
         #  Single line
         #
-        $self->_stream("C<<< $text >>>");
+	if( $text =~ /[<>]/ ) {
+		# this is so that extra angle brackets are not used unless necessary
+		my @all_angle = $text =~ /(<+|>+)/g;
+		my @all_angle_len = map { length $_ } @all_angle;
+		my $longest = List::Util::max @all_angle_len;
+
+		my $start_angle = "<" x ($longest+2);
+		my $end_angle =  ">" x ($longest+2);
+		$self->_stream("C$start_angle $text $end_angle");
+	} else {
+		$self->_stream("C<$text>");
+	}
     }
     $code_buf=undef;
 }

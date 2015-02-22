@@ -145,7 +145,7 @@ C<~/perl5/local/5.12.5/catalyst> 디렉터리 밑의 모듈을
 모듈들을 관리할 구조들을 생성한 후 환경 변수를 지정할 코드를 출력됩니다.
 보통은 이 구문을 Bash 초기화 파일에 추가합니다만 여기서는 smartcd로
 관리할 것이므로 C<~/.smartcd> 디렉터리 밑에 설정합니다.
-C<~/.smartcd/home/<your_account>/project/catalyst> 디렉터리를 만들고
+C<<< ~/.smartcd/home/<your_account>/project/catalyst >>> 디렉터리를 만들고
 그 밑에 C<bash_enter> 파일을 만듭니다.
 이 파일이 smartcd로 C<~/project/catalyst> 디렉터리에
 들어갈 때 실행되는 스크립트입니다.
@@ -198,7 +198,7 @@ smartcd 설정이 복잡해지는 단점이 있습니다.
 C<env> 명령은 C<perlbrew>가 쉘과의 통합을 위해 사용하는 비교적 저수준 명령입니다.
 이 명령을 사용하면 Perl 버전을 변경할 때 지정하는 환경 변수를 출력합니다.
 C<perlbrew>는 이 환경 변수와 C<PATH> 환경 변수를 변경해서 Perl 버전을 변경합니다.
-따라서 C<~/.smartcd/home/<your_accout>/project/pilot/bash_enter> 스크립트의
+따라서 C<<< ~/.smartcd/home/<your_accout>/project/pilot/bash_enter >>> 스크립트의
 내용은 다음과 같습니다.
 
     #!bash
