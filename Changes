@@ -1,5 +1,6 @@
-Release history for Markdown-Pod
+Release history for {{ $dist->name }}
 
+{{ $NEXT }}
     - [GitHub #6] Use a stack to handle styles inside other styles (ZMUGHAL)
     - [GitHub #5] Smarter use of code formatting (ZMUGHAL)
     - [GitHub #4] Formatting fixes (ASPEER)
