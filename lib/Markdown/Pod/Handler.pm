@@ -4,7 +4,7 @@ package Markdown::Pod::Handler;
 use strict;
 use warnings;
 
-our $VERSION = '0.005';
+our $VERSION = '0.006';
 
 use Markdent::Types qw(
     Bool Str HashRef OutputStream HeaderLevel

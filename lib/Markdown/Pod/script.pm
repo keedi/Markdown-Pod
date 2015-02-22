@@ -4,7 +4,7 @@ package Markdown::Pod::script;
 use strict;
 use warnings;
 
-our $VERSION = '0.005';
+our $VERSION = '0.006';
 
 use Encode qw( encodings decode );
 use Getopt::Long;
