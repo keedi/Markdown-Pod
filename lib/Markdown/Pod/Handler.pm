@@ -467,6 +467,56 @@ no Moose;
 1;
 __END__
 
+=for Pod::Coverage
+    STACK_CODE
+    STACK_EMPHASIS
+    STACK_LINK
+    STACK_STRONG
+    STACK_TBLE
+    auto_link
+    code_block
+    end_blockquote
+    end_code
+    end_document
+    end_emphasis
+    end_header
+    end_html_tag
+    end_link
+    end_list_item
+    end_ordered_list
+    end_paragraph
+    end_strong
+    end_table
+    end_table_body
+    end_table_cell
+    end_table_row
+    end_unordered_list
+    horizontal_rule
+    html_block
+    html_comment_block
+    html_entity
+    html_tag
+    image
+    line_break
+    preformatted
+    start_blockquote
+    start_code
+    start_document
+    start_emphasis
+    start_header
+    start_html_tag
+    start_link
+    start_list_item
+    start_ordered_list
+    start_paragraph
+    start_strong
+    start_table
+    start_table_body
+    start_table_cell
+    start_table_row
+    start_unordered_list
+    text
+
 =head1 SYNOPSIS
 
     my $handler = Markdown::Pod::Handler->new(
