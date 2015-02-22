@@ -4,7 +4,7 @@ use warnings;
 package Markdown::Pod::Test;
 
 use Exporter 5.57 qw(import);
-use Encode        qw(decode_utf8);
+use Encode qw(decode_utf8);
 use Markdown::Pod;
 
 our @EXPORT_OK = qw( get_pod markdown_to_pod );

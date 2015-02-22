@@ -1,48 +1,17 @@
-Markdown-Pod-*
-
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.apk
-
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
-
-# OS generated files #
-######################
-.DS_Store?
-ehthumbs.db
-Icon?
-Thumbs.db
-
-# Configuration files #
-#######################
-*.project
-*.settings
-*.classpath
-
-# Editor generated files #
-##########################
-*.swp
 *.bak
+*.old
+*.tar.gz
+*.tmp
+*~
+.pause
+/.build
+/.tidyall.d
+/Build
+/Build.bat
+/MYMETA.yml
+/Makefile
+/Markdown-Pod-*
+/PM_to_blib
+/_build
+/blib
+/cover_db

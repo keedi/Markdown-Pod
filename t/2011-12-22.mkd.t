@@ -5,7 +5,7 @@ use Test::More tests => 1;
 use Markdown::Pod::Test qw( get_pod markdown_to_pod );
 
 my $file = 't/mkd/2011-12-22.mkd';
-is markdown_to_pod($file), get_pod(\*DATA), "converting $file";
+is markdown_to_pod($file), get_pod( \*DATA ), "converting $file";
 
 __DATA__
 =encoding utf8
@@ -225,7 +225,7 @@ C<get_food> 함수의 구현은 여러분의 학교에 맞게 작성해야 합�
 I<그림 2.> 정규표현식 풀이
 
 즉, 급식은 매일 바뀌지만 앞뒤에 붙어있는 태그는 변함이 없기 때문에,
-앞 뒤에는 C<<td  style='font-weight:bold'>>와 C<</td>>를 그대로 쓰고
+앞 뒤에는 C<<< <td  style='font-weight:bold'> >>>와 C<<< </td> >>>를 그대로 쓰고
 매일 바뀌는 부분은 C<.+?>로 걸러냈습니다.
 그리고 걸러진 내용을 가져오기 위해 괄호로 감쌌습니다.
 여기서 C<.+?>의 각각의 기호는 의미가 있습니다. 
@@ -268,7 +268,7 @@ C<m|...|ig>에서 C<g>에 해당하는 정규표현식 옵션은 이 정규표�
 
 네, 달력 형태로 각 항목에 그 날의 급식이 써져있는데,
 C<tr>, C<td> 태그로 씌워져 있습니다.
-(정확히는 C<<tr align="center">>과 C<<tr><td colspan="4" bgcolor="eeeeee" height="1"></td></tr>>)
+(정확히는 C<<< <tr align="center"> >>>과 C<<< <tr><td colspan="4" bgcolor="eeeeee" height="1"></td></tr> >>>)
 그리고 각 시간대 별 식단도 다시 C<tr>과 C<td> 태그로 감싸져 있네요.
 게다가 그 중, 오늘의 급식만 스타일 속성이
 C<font-weight:bold;color:#666666;>으로 지정되어 있습니다.

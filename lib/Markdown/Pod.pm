@@ -4,6 +4,8 @@ package Markdown::Pod;
 use strict;
 use warnings;
 
+our $VERSION = '0.006';
+
 use Encode qw( encodings );
 use List::Util qw( first );
 use Markdent::Parser;
@@ -18,9 +20,9 @@ sub markdown_to_pod {
     my $self = shift;
     my ( $dialect, $markdown, $encoding ) = validated_list(
         \@_,
-        dialect  => { isa => Str, default => 'Standard' },
+        dialect  => { isa => Str, default => 'Standard', optional => 1 },
         markdown => { isa => Str },
-        encoding => { isa => Str, default => q{}, optional => 1 },
+        encoding => { isa => Str, default => q{},        optional => 1 },
     );
 
     my $capture = q{};
@@ -57,17 +59,19 @@ sub markdown_to_pod {
     # FIXME
     # dirty code to support blockquote
     #
-    $capture =~ s{
-        ^ =begin \s+ blockquote
-        \s+
-        (.*?)
-        \s+
-        ^ =end \s+ blockquote
-    }{
-        my $quoted = $1;
-        $quoted =~ s/^/    /gsm;
-        $quoted;
-    }xgsme;
+    # UPDATE A.Speer - not needed, blockquote converted to use =over 2, =back
+    #
+    #$capture =~ s{
+    #    ^ =begin \s+ blockquote
+    #    \s+
+    #    (.*?)
+    #    \s+
+    #    ^ =end \s+ blockquote
+    #}{
+    #    my $quoted = $1;
+    #    $quoted =~ s/^/    /gsm;
+    #    $quoted;
+    #}xgsme;
 
     return $capture;
 }

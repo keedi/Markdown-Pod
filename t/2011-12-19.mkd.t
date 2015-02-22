@@ -5,7 +5,7 @@ use Test::More tests => 1;
 use Markdown::Pod::Test qw( get_pod markdown_to_pod );
 
 my $file = 't/mkd/2011-12-19.mkd';
-is markdown_to_pod($file), get_pod(\*DATA), "converting $file";
+is markdown_to_pod($file), get_pod( \*DATA ), "converting $file";
 
 __DATA__
 =encoding utf8
@@ -177,8 +177,8 @@ C<$chat_re>에 매치된 문자열이 넘어가겠네요.
     }
 
 방금 본 C<post> 함수와 비슷합니다.
-먼저 해당 핸들러는 C<__PACKAGE__->asynchronous(1);>을 통해 비동기 모드로 설정했습니다.
-Tatsumaki::MessageQueue 인스턴스를 하나 만들고 C<$mq->poll_once>로 모든 메시지를 한꺼번에 대기합니다.
+먼저 해당 핸들러는 C<<< __PACKAGE__->asynchronous(1); >>>을 통해 비동기 모드로 설정했습니다.
+Tatsumaki::MessageQueue 인스턴스를 하나 만들고 C<<< $mq->poll_once >>>로 모든 메시지를 한꺼번에 대기합니다.
 핸들러를 비동기 모드로 설정했기 때문에 핸들러 객체에 등록된 Writer 객체를 사용하는
 C<write>과 C<finish> 함수로 도착한 이벤트를 출력합니다. 해시 레퍼런스였던 메시지는 JSON으로 변환되어 전달됩니다.
 C<ChatMultipartPollHandler>는 어떨까요?

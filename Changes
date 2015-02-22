@@ -1,4 +1,15 @@
-Release history for Markdown-Pod
+Release history for {{ $dist->name }}
+
+{{ $NEXT }}
+    - [GitHub #6] Use a stack to handle styles inside other styles (ZMUGHAL)
+    - [GitHub #5] Smarter use of code formatting (ZMUGHAL)
+    - [GitHub #4] Formatting fixes (ASPEER)
+        - Adding --dialect option to script command line
+        - Adding missing methods (e.g. auto_link, horizontal rule)
+          to Handler.pm
+        - Adding simple table formatting to Handler.pm
+        - Changing block-quote formatting so it produces output
+          compatible with Pod::Simple::HTML
 
 0.005     2013-12-15 17:50:43 Asia/Seoul
     - remove File::Slurp module dependency

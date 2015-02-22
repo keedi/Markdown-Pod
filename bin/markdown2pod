@@ -3,6 +3,8 @@
 # PODNAME: markdown2pod
 # ABSTRACT: markdown2pod - convert Markdown text to Pod
 
+use strict;
+use warnings;
 use Markdown::Pod::script;
 
 unless (caller) {
