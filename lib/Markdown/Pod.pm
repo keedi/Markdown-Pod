@@ -22,7 +22,7 @@ sub markdown_to_pod {
         \@_,
         dialect  => { isa => Str, default => 'Standard', optional => 1 },
         markdown => { isa => Str },
-        encoding => { isa => Str, default => q{}, optional => 1 },
+        encoding => { isa => Str, default => q{},        optional => 1 },
     );
 
     my $capture = q{};
