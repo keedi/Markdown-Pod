@@ -1,6 +1,8 @@
 Release history for {{ $dist->name }}
 
 {{ $NEXT }}
+
+0.006     2015-02-22 17:41:28+09:00 Asia/Seoul
     - [GitHub #6] Use a stack to handle styles inside other styles (ZMUGHAL)
     - [GitHub #5] Smarter use of code formatting (ZMUGHAL)
     - [GitHub #4] Formatting fixes (ASPEER)
