@@ -145,4 +145,16 @@ __END__
 This module contains script related functions.
 
 
+=method new
+
+=method doit
+
+=method env
+
+=method parse_options
+
+=method show_help
+
+=method show_version
+
 =cut
