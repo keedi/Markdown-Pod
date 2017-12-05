@@ -52,6 +52,8 @@ use constant {
 
 my @style_stack;
 
+my $list_depth = 0;
+
 sub _stream {
     my ( $self, @params ) = @_;
     print { $self->_output } @params;
@@ -202,24 +204,30 @@ sub end_blockquote {
 sub start_unordered_list {
     my $self = shift;
 
+    $self->_stream("\n") if $list_depth;
+    $list_depth++;
     $self->_stream("=over\n\n");
 }
 
 sub end_unordered_list {
     my $self = shift;
 
+    $list_depth--;
     $self->_stream("=back\n\n");
 }
 
 sub start_ordered_list {
     my $self = shift;
 
+    $self->_stream("\n") if $list_depth;
+    $list_depth++;
     $self->_stream("=over\n\n");
 }
 
 sub end_ordered_list {
     my $self = shift;
 
+    $list_depth--;
     $self->_stream("=back\n\n");
 }
 
