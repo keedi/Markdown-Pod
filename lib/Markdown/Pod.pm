@@ -20,9 +20,9 @@ sub markdown_to_pod {
     my $self = shift;
     my ( $dialect, $markdown, $encoding ) = validated_list(
         \@_,
-        dialect  => { isa => Str, default => 'Standard', optional => 1 },
-        markdown => { isa => Str },
-        encoding => { isa => Str, default => q{},        optional => 1 },
+        dialect  => { type => 'Str', default => 'Standard', optional => 1 },
+        markdown => { type => 'Str' },
+        encoding => { type => 'Str', default => q{},        optional => 1 },
     );
 
     my $capture = q{};

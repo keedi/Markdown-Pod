@@ -1,6 +1,10 @@
 Release history for {{ $dist->name }}
 
 {{ $NEXT }}
+    - [GitHub #8] Markdent v0.27 uses Specio for types (ZMUGHAL)
+      - Fixes an installation error that occurs when using the version
+        v0.27 or later of Markdent using Specio
+      - Reported-by: markwilkinson, rsrpsinr
 
 0.006     2015-02-22 17:41:28+09:00 Asia/Seoul
     - [GitHub #6] Use a stack to handle styles inside other styles (ZMUGHAL)
