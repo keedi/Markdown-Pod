@@ -4,7 +4,7 @@ package Markdown::Pod;
 use strict;
 use warnings;
 
-our $VERSION = '0.007';
+our $VERSION = '0.008';
 
 use Encode qw( encodings );
 use List::Util qw( first );

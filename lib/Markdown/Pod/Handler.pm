@@ -4,7 +4,7 @@ package Markdown::Pod::Handler;
 use strict;
 use warnings;
 
-our $VERSION = '0.007';
+our $VERSION = '0.008';
 
 use Markdent::Types;
 

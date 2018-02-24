@@ -1,6 +1,8 @@
 Release history for {{ $dist->name }}
 
 {{ $NEXT }}
+
+0.007     2018-02-24 17:58:42+09:00 Asia/Seoul
     - [GitHub #7] Fix nested list converting bug (ZMUGHAL)
       - Add extra newline when starting a nested list
       - Reported-by: JMAC, olafhering
