@@ -341,12 +341,26 @@ sub html_tag {
 
     my $attributes_str = q{};
     $attributes_str = join q{ },
-        map { qq|$_="$attributes->{$_}"| } sort keys %$attributes;
+        map {
+            defined $attributes->{$_}
+                ? qq|$_="$attributes->{$_}"|
+                : qq|$_|
+            } sort keys %$attributes;
     if ( $tag =~ /^br$/i ) {
-        $self->_stream(qq|<$tag $attributes_str />\n|);
+        if ($attributes_str) {
+            $self->_stream(qq|<$tag $attributes_str />\n|);
+        }
+        else {
+            $self->_stream(qq|<$tag />\n|);
+        }
     }
     else {
-        $self->_stream(qq|<$tag $attributes_str />|);
+        if ($attributes_str) {
+            $self->_stream(qq|<$tag $attributes_str />|);
+        }
+        else {
+            $self->_stream(qq|<$tag />|);
+        }
     }
 }
 
