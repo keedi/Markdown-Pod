@@ -1,6 +1,8 @@
 Release history for {{ $dist->name }}
 
 {{ $NEXT }}
+
+0.008     2021-04-11 21:35:57+09:00 Asia/Seoul
     - Remove double spaces if attributes are empty
     - [GitHub #13] Fix boolean HTML attribute handling bug (POTATOGIM)
       - Update module dependency: Markdent 0.40
