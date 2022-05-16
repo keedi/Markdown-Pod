@@ -28,6 +28,7 @@ sub markdown_to_pod {
     my $capture = q{};
     open my $fh, '>', \$capture
         or die $!;
+    bless $fh, 'IO::File'; # A.Speer: Compatibility with older Perl versions
 
     if ($encoding) {
         my $found = first { $_ eq $encoding } Encode->encodings;
